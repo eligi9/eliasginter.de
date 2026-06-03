@@ -38,6 +38,40 @@
     "featured": true
   },
   {
+    "id": "lifecyrcle",
+    "title": "LifeCyrcle",
+    "kicker": "Abstract Concept / Motion",
+    "type": "video",
+    "year": "2023",
+    "status": "Completed",
+    "description": "Eine abstrakte Animation, in der einfache geometrische Formen zur Soundspur den Lebenszyklus eines Kreises erzaehlen.",
+    "summary": "Ein audiovisuelles System ueber Entstehung, Bewegung, Veraenderung und Aufloesung einer geometrischen Figur.",
+    "abstract": "LifeCyrcle reduziert Leben auf eine elementare Form: den Kreis. Basierend auf einer Soundspur entsteht eine abstrakte Animation, die ohne figuerliche Darstellung auskommt und nur mit einfachen geometrischen Objekten arbeitet.\n\nDer Kreis wird dabei nicht als statisches Zeichen verstanden, sondern als Figur mit eigener Entwicklung. Rhythmus, Skalierung, Wiederholung und Transformation bilden eine visuelle Erzaehlung ueber Werden, Veraenderung und Vergehen. Das Projekt uebersetzt Klang in Bewegung und macht aus einer reduzierten Form ein abstraktes Konzept von Lebenszeit.",
+    "role": ["Concept", "Animation", "Motion Design"],
+    "tools": ["Animation", "Sound-based Motion", "Geometric Design"],
+    "tags": ["Abstract Concept", "Animation", "Motion", "Sound", "Geometry"],
+    "themes": ["Lebenszyklus", "Kreis", "Reduktion", "Transformation", "Zeit"],
+    "media": {
+      "kind": "video",
+      "src": null,
+      "poster": "/media/video-poster.svg",
+      "alt": "LifeCyrcle als abstrakte Animation ueber das Leben eines Kreises"
+    },
+    "videoEmbed": {
+      "provider": "youtube",
+      "url": "https://youtu.be/RPr5fRNazKw",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/RPr5fRNazKw?enablejsapi=1&controls=0&rel=0&modestbranding=1&playsinline=1&loop=1&playlist=RPr5fRNazKw&disablekb=1&fs=0&iv_load_policy=3",
+      "background": true,
+      "controls": false
+    },
+    "links": {
+      "live": null,
+      "repository": null,
+      "caseStudy": null
+    },
+    "featured": true
+  },
+  {
     "id": "lonis-weltraumreise",
     "title": "Lonis Weltraumreise",
     "kicker": "Digital Design / Interactive Experience",
