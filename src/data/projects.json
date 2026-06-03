@@ -198,5 +198,39 @@
       "caseStudy": null
     },
     "featured": true
+  },
+  {
+    "id": "cut-n-copy",
+    "title": "Cut N Copy",
+    "kicker": "Abstract Concept / Audiovisual System",
+    "type": "video",
+    "year": "2023",
+    "status": "Completed",
+    "description": "Ein audiovisuelles Experiment, in dem selbst aufgenommene Alltagssounds und Handlungen zu einer rhythmischen Sequencer-Komposition werden.",
+    "summary": "Sound und Bild folgen demselben Prinzip: Aufgenommene Aktionen werden geschnitten, wiederholt und wie in einem Step-Sequencer zu einer dynamischen Komposition angeordnet.",
+    "abstract": "Cut N Copy basiert auf Sounds, die im direkten Umfeld erzeugt und aufgenommen wurden. Zu jedem Klang gehoert auch das Bild der Handlung, die ihn hervorbringt. Aus diesen fragmentierten Aufnahmen entsteht eine Komposition, die wie ein Step-Sequencer funktioniert: kurze Samples werden gesetzt, wiederholt und rhythmisch miteinander kombiniert.\n\nDas Video uebertraegt dasselbe Prinzip auf die Bildebene. Es zeigt nicht nur das Ergebnis der Klaenge, sondern die Handlungen selbst als visuelle Samples. So entsteht ein dynamisches System, in dem Alltag, Klangproduktion und Schnitt zu einer gemeinsamen audiovisuellen Struktur werden.",
+    "role": ["Concept", "Sound Recording", "Editing", "Motion"],
+    "tools": ["Field Recording", "Video Editing", "Rhythmic Composition"],
+    "tags": ["Abstract Concept", "Sound", "Video", "Sequencer", "Composition"],
+    "themes": ["Alltag", "Sampling", "Rhythmus", "Wiederholung", "Klanghandlung"],
+    "media": {
+      "kind": "video",
+      "src": null,
+      "poster": "/media/video-poster.svg",
+      "alt": "Cut N Copy als audiovisuelle Komposition aus Alltagssounds und Handlungen"
+    },
+    "videoEmbed": {
+      "provider": "youtube",
+      "url": "https://www.youtube.com/watch?v=9U_Ca4vRa3w",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/9U_Ca4vRa3w?enablejsapi=1&controls=0&rel=0&modestbranding=1&playsinline=1&loop=1&playlist=9U_Ca4vRa3w&disablekb=1&fs=0&iv_load_policy=3",
+      "background": true,
+      "controls": false
+    },
+    "links": {
+      "live": null,
+      "repository": null,
+      "caseStudy": null
+    },
+    "featured": true
   }
 ]
