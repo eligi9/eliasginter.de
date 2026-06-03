@@ -72,6 +72,44 @@
     "featured": true
   },
   {
+    "id": "easyjam",
+    "title": "EasyJam",
+    "kicker": "Digital Design / Interactive Experience",
+    "type": "webapp",
+    "year": "2023",
+    "status": "Prototype",
+    "description": "Eine mobile Webapplikation, mit der Musik-Einsteiger intuitiv eigene Jam-Tracks per Drag and Drop erstellen koennen.",
+    "summary": "EasyJam macht musikalisches Ueben spielerischer: Tonart, Tempo und Songstruktur werden ueber einfache Touch-Interaktionen zu einem eigenen Backing Track kombiniert.",
+    "abstract": "EasyJam ist eine Webapplikation fuer den Einstieg ins gemeinsame Musizieren. Gerade am Anfang braucht Musiklernen Geduld, Zeit und Uebung; gleichzeitig fehlt vielen Anfaengern das Netzwerk, um direkt mit anderen zu spielen. Allein zu ueben funktioniert, wird aber schnell monoton.\n\nDie Anwendung bietet deshalb eine einfache Moeglichkeit, eigene Jam-Tracks auf einem Touchdevice zu bauen. Per Spracheingabe kann die Tonart erkannt werden, das Tempo wird ueber Tap-in-BPM gesetzt und musikalische Bausteine lassen sich per Drag and Drop zu einer Komposition arrangieren. So entsteht ein spielerischer Zugang zu Tonarten, Harmonien, Timing und Songstruktur.",
+    "role": ["Concept", "Interaction Design", "Frontend Development", "Sound Interaction"],
+    "tools": ["Web App", "Touch Interaction", "Voice Input", "Drag and Drop", "BPM Detection"],
+    "tags": ["Digital Design", "Interactive Experience", "Webapp", "Music", "Touch Interface"],
+    "themes": ["Musiklernen", "Jam Tracks", "Tempo", "Harmonie", "Spielerisches Ueben"],
+    "interaction": {
+      "input": "Spracheingabe zur Tonarterkennung, Tap-in-BPM und Drag-and-Drop auf Touchdevices",
+      "output": "Ein intuitiv arrangierter Backing Track zum Ueben und Jammen"
+    },
+    "media": {
+      "kind": "video",
+      "src": null,
+      "poster": "/media/video-poster.svg",
+      "alt": "EasyJam als mobile Webapplikation zum Erstellen eigener Backing Tracks"
+    },
+    "videoEmbed": {
+      "provider": "youtube",
+      "url": "https://www.youtube.com/watch?v=F6xsKmUXmDk",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/F6xsKmUXmDk?enablejsapi=1&controls=0&rel=0&modestbranding=1&playsinline=1&loop=1&playlist=F6xsKmUXmDk&disablekb=1&fs=0&iv_load_policy=3",
+      "background": true,
+      "controls": false
+    },
+    "links": {
+      "live": null,
+      "repository": null,
+      "caseStudy": null
+    },
+    "featured": true
+  },
+  {
     "id": "lonis-weltraumreise",
     "title": "Lonis Weltraumreise",
     "kicker": "Digital Design / Interactive Experience",
