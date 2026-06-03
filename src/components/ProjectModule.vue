@@ -77,10 +77,8 @@ const pauseVideo = () => {
 
     <div class="project-info">
       <h2>{{ project.title }}</h2>
-      <p class="project-meta">
-        <span>{{ project.kicker }}</span>
-        <span v-if="project.year">{{ project.year }}</span>
-      </p>
+      <p class="project-kicker">{{ project.kicker }}</p>
+      <p v-if="project.year" class="project-year">{{ project.year }}</p>
       <p>{{ project.description }}</p>
       <ul aria-label="Schlagworte">
         <li v-for="item in project.tags" :key="item">{{ item }}</li>

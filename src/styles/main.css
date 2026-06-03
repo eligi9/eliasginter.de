@@ -171,10 +171,7 @@ a {
   letter-spacing: 0;
 }
 
-.project-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 14px;
+.project-kicker {
   margin: 14px 0 0;
   color: #6fcabd;
   font-size: 0.78rem;
@@ -182,13 +179,14 @@ a {
   text-transform: uppercase;
 }
 
-.project-meta span + span::before {
-  content: "/";
-  margin-right: 14px;
-  color: #5f666a;
+.project-year {
+  margin: 8px 0 0;
+  color: #f4f1e8;
+  font-size: 0.86rem;
+  font-weight: 700;
 }
 
-.project-info p:not(.section-kicker):not(.project-meta),
+.project-info p:not(.section-kicker):not(.project-kicker):not(.project-year),
 .profile-section p {
   margin: 18px 0 0;
   max-width: 58ch;
