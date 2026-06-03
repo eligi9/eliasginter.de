@@ -34,9 +34,8 @@ const projects = [
   <header class="site-header">
     <a class="wordmark" href="#top" aria-label="Zum Anfang">Elias Ginter</a>
     <nav class="site-nav" aria-label="Hauptnavigation">
-      <a href="#arbeiten">Arbeiten</a>
-      <a href="#profil">Profil</a>
-      <a href="mailto:hello@example.com">Kontakt</a>
+      <a href="#arbeiten">Work</a>
+      <a href="#profil">About</a>
     </nav>
   </header>
 
