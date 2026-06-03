@@ -46,7 +46,7 @@ const projects = [
         <P5Canvas variant="hero" />
       </div>
       <div class="hero-copy">
-        <h1 id="hero-title">Web, Video, Gestaltung und Ideen als bewegliche Systeme.</h1>
+        <h1 id="hero-title">Digital Design, Abstract Concepts and interactive Experiences</h1>
       </div>
     </section>
 
