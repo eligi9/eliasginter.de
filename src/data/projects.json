@@ -76,6 +76,55 @@
     "featured": true
   },
   {
+    "id": "moodtranslator",
+    "title": "MoodTranslator",
+    "kicker": "Abstract Concept / Physical Interface",
+    "type": "physical-interface",
+    "year": null,
+    "status": "Prototype",
+    "description": "Ein physisches Interface, das Gesichtsausdruecke erkennt und emotionale Zustaende in abstrakte Lichtsignale uebersetzt.",
+    "summary": "Ein Experiment ueber die Detektion, Abstraktion und externe Darstellung von Emotion durch ein nicht-menschliches Gegenueber.",
+    "abstract": "MoodTranslator untersucht, wie Emotionen technisch gelesen, abstrahiert und als sichtbares Signal nach aussen getragen werden koennen. Eine Webcam erfasst den Gesichtsausdruck der tragenden Person; die erkannte Stimmung wird anschliessend in Licht, Farbe und Bewegung uebersetzt.\n\nDas Projekt bewegt sich zwischen interaktiver Installation, Physical Interface und spekulativem Kommunikationsobjekt. Im Zentrum steht nicht die perfekte Erkennung von Emotion, sondern die Frage, was passiert, wenn ein nicht-menschliches System versucht, innere Zustaende sichtbar zu machen. Der Gegenueber begegnet keiner direkten menschlichen Mimik, sondern einer maschinell uebersetzten Facette: Farbe, Rhythmus und mechanische Bewegung ersetzen den Ausdruck des Gesichts.\n\nRealisiert wurde der Prototyp mit Gesichtsausdruckserkennung in p5.js, zwei Hochleistungs-LEDs, Farbfolien und Servomotoren. Der Arduino uebernimmt dabei nur die Ausfuehrung der Zustands-IDs; die Interpretation und Logik liegen weitgehend in p5.js.",
+    "role": ["Concept", "Interaction Design", "Physical Prototyping", "Creative Coding"],
+    "tools": ["p5.js", "Face Detection", "Arduino", "Servo Motors", "High Power LEDs"],
+    "tags": ["Abstract Concept", "Interactive Experience", "Physical Interface", "Emotion", "Machine Perception"],
+    "themes": ["Emotionserkennung", "Abstraktion", "Nicht-menschliche Kommunikation", "Koerper", "Signal"],
+    "interaction": {
+      "input": "Gesichtsausdruckserkennung ueber Webcam",
+      "output": "Farbsignale, Blinkrhythmen und mechanisch gefuehrte Farbfolien",
+      "states": [
+        {
+          "mood": "Neutral",
+          "signal": "Blaues, konstantes Licht"
+        },
+        {
+          "mood": "Surprised",
+          "signal": "Gelbes Blinklicht als Zeichen von Aufregung"
+        },
+        {
+          "mood": "Happy",
+          "signal": "Gruenes flackerndes Licht als positives Signal"
+        }
+      ]
+    },
+    "collaboration": {
+      "with": ["Tom Henkl", "Elias Ginter"],
+      "context": "Grundlagen Interaktive Gestaltung"
+    },
+    "media": {
+      "kind": "image",
+      "src": "/media/concept-board.svg",
+      "poster": null,
+      "alt": "MoodTranslator als physisches Interface zur Uebersetzung von Emotion in Lichtsignale"
+    },
+    "links": {
+      "live": null,
+      "repository": null,
+      "caseStudy": null
+    },
+    "featured": true
+  },
+  {
     "id": "interface-als-spielfeld",
     "title": "Interface als Spielfeld",
     "kicker": "Webapp / Interaction",
