@@ -16,7 +16,33 @@ onMounted(async () => {
   const { default: p5 } = await import('p5')
 
   sketchInstance = new p5((sketch) => {
-    let points = []
+    const loadedAt = Date.now()
+    const maxSegments = props.variant === 'hero' ? 180 : 90
+    const minutePalette = [
+      [111, 202, 189],
+      [240, 109, 79],
+      [221, 225, 82],
+      [136, 164, 255],
+      [244, 241, 232],
+      [192, 121, 214],
+    ]
+
+    let random = () => 0.5
+    let origin = { x: 0.5, y: 0.5 }
+    let currentPoint = origin
+    let segments = []
+    let lastSecond = -1
+
+    const createSeededRandom = (seed) => {
+      let value = seed >>> 0
+      return () => {
+        value += 0x6d2b79f5
+        let result = value
+        result = Math.imul(result ^ (result >>> 15), result | 1)
+        result ^= result + Math.imul(result ^ (result >>> 7), result | 61)
+        return ((result ^ (result >>> 14)) >>> 0) / 4294967296
+      }
+    }
 
     const getCanvasSize = () => {
       const bounds = host.value.getBoundingClientRect()
@@ -26,14 +52,61 @@ onMounted(async () => {
       }
     }
 
-    const resetPoints = () => {
-      const count = props.variant === 'hero' ? 72 : 46
-      points = Array.from({ length: count }, () => ({
-        x: sketch.random(sketch.width),
-        y: sketch.random(sketch.height),
-        speed: sketch.random(0.35, 1.4),
-        radius: sketch.random(1.5, 5),
-      }))
+    const createPoint = () => ({
+      x: 0.08 + random() * 0.84,
+      y: 0.08 + random() * 0.84,
+    })
+
+    const getSegmentColor = (date) => {
+      const base = minutePalette[date.getMinutes() % minutePalette.length]
+      const shadeStep = Math.floor(date.getSeconds() / 10)
+      const shade = 0.56 + shadeStep * 0.075
+
+      return base.map((channel) => Math.min(255, Math.round(channel * shade)))
+    }
+
+    const addSegment = (date) => {
+      const nextPoint = createPoint()
+      segments.push({
+        from: currentPoint,
+        to: nextPoint,
+        color: getSegmentColor(date),
+        createdAt: sketch.millis(),
+        weight: 1.2 + random() * 3.8,
+      })
+
+      if (segments.length > maxSegments) {
+        segments = segments.slice(segments.length - maxSegments)
+      }
+
+      currentPoint = nextPoint
+    }
+
+    const setupTimeSystem = () => {
+      random = createSeededRandom(loadedAt)
+      origin = createPoint()
+      currentPoint = origin
+      segments = []
+      lastSecond = new Date().getSeconds()
+    }
+
+    const toCanvasPoint = (point) => ({
+      x: point.x * sketch.width,
+      y: point.y * sketch.height,
+    })
+
+    const drawBackgroundSystem = () => {
+      sketch.background(13, 15, 17)
+      sketch.stroke(244, 241, 232, 14)
+      sketch.strokeWeight(1)
+
+      for (let x = sketch.width / 8; x < sketch.width; x += sketch.width / 8) {
+        sketch.line(x, 0, x, sketch.height)
+      }
+
+      for (let y = sketch.height / 8; y < sketch.height; y += sketch.height / 8) {
+        sketch.line(0, y, sketch.width, y)
+      }
     }
 
     sketch.setup = () => {
@@ -41,51 +114,58 @@ onMounted(async () => {
       const canvas = sketch.createCanvas(width, height)
       canvas.parent(host.value)
       sketch.pixelDensity(Math.min(window.devicePixelRatio, 2))
-      sketch.noStroke()
-      resetPoints()
+      sketch.noFill()
+      sketch.strokeCap(sketch.ROUND)
+      setupTimeSystem()
 
       resizeObserver = new ResizeObserver(() => {
         const nextSize = getCanvasSize()
         sketch.resizeCanvas(nextSize.width, nextSize.height)
-        resetPoints()
       })
       resizeObserver.observe(host.value)
     }
 
     sketch.draw = () => {
-      sketch.background(13, 15, 17, 34)
+      const now = new Date()
+      const currentSecond = now.getSeconds()
 
-      const cursorX = sketch.mouseX || sketch.width * 0.5
-      const cursorY = sketch.mouseY || sketch.height * 0.5
+      if (currentSecond !== lastSecond) {
+        addSegment(now)
+        lastSecond = currentSecond
+      }
 
-      points.forEach((point, index) => {
-        const angle = sketch.noise(index, sketch.frameCount * 0.004) * sketch.TAU
-        point.x += Math.cos(angle) * point.speed
-        point.y += Math.sin(angle) * point.speed
+      drawBackgroundSystem()
 
-        if (point.x < -20) point.x = sketch.width + 20
-        if (point.x > sketch.width + 20) point.x = -20
-        if (point.y < -20) point.y = sketch.height + 20
-        if (point.y > sketch.height + 20) point.y = -20
+      segments.forEach((segment, index) => {
+        const from = toCanvasPoint(segment.from)
+        const to = toCanvasPoint(segment.to)
+        const age = sketch.millis() - segment.createdAt
+        const progress = sketch.constrain(age / 880, 0, 1)
+        const easedProgress = 1 - Math.pow(1 - progress, 3)
+        const endX = sketch.lerp(from.x, to.x, easedProgress)
+        const endY = sketch.lerp(from.y, to.y, easedProgress)
+        const alpha = sketch.map(index, 0, Math.max(1, segments.length - 1), 45, 210)
 
-        const distance = sketch.dist(point.x, point.y, cursorX, cursorY)
-        const pull = sketch.map(Math.min(distance, 240), 0, 240, 1, 0)
-
-        sketch.fill(244, 241, 232, 70 + pull * 130)
-        sketch.circle(point.x, point.y, point.radius + pull * 7)
-
-        if (index % 3 === 0) {
-          sketch.stroke(115, 202, 190, 26 + pull * 60)
-          sketch.line(point.x, point.y, cursorX, cursorY)
-          sketch.noStroke()
-        }
+        sketch.stroke(segment.color[0], segment.color[1], segment.color[2], alpha)
+        sketch.strokeWeight(segment.weight)
+        sketch.line(from.x, from.y, endX, endY)
       })
+
+      const originPoint = toCanvasPoint(origin)
+      const activePoint = toCanvasPoint(currentPoint)
+      const pulse = 8 + Math.sin(sketch.frameCount * 0.08) * 3
+
+      sketch.noStroke()
+      sketch.fill(244, 241, 232, 180)
+      sketch.circle(originPoint.x, originPoint.y, 7)
+      sketch.fill(244, 241, 232, 95)
+      sketch.circle(activePoint.x, activePoint.y, pulse)
+      sketch.noFill()
     }
 
     sketch.windowResized = () => {
       const { width, height } = getCanvasSize()
       sketch.resizeCanvas(width, height)
-      resetPoints()
     }
   })
 })
