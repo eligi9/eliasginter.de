@@ -13,6 +13,14 @@ defineProps({
   <article class="project-module">
     <div class="project-media">
       <P5Canvas v-if="project.type === 'p5'" />
+      <iframe
+        v-else-if="project.videoEmbed?.embedUrl"
+        class="media-fill media-embed"
+        :src="project.videoEmbed.embedUrl"
+        :title="`${project.title} Video`"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+      ></iframe>
       <video
         v-else-if="project.type === 'video'"
         class="media-fill"

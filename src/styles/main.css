@@ -146,6 +146,10 @@ a {
   object-fit: cover;
 }
 
+.media-embed {
+  border: 0;
+}
+
 .project-info {
   align-self: end;
   padding: clamp(22px, 4vw, 48px);
