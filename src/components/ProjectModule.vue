@@ -39,21 +39,15 @@ const pauseVideo = () => {
       @mouseleave="pauseVideo"
     >
       <P5Canvas v-if="project.type === 'p5'" />
-      <template v-else-if="hasVideoEmbed">
-        <img
-          class="media-fill media-poster"
-          :src="project.media.poster"
-          :alt="project.media.alt"
-        />
-        <iframe
-          ref="videoFrame"
-          class="media-fill media-embed"
-          :src="project.videoEmbed.embedUrl"
-          :title="`${project.title} Video`"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </template>
+      <iframe
+        v-else-if="hasVideoEmbed"
+        ref="videoFrame"
+        class="media-fill media-embed"
+        :src="project.videoEmbed.embedUrl"
+        :title="`${project.title} Video`"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+      ></iframe>
       <video
         v-else-if="project.type === 'video'"
         class="media-fill"
