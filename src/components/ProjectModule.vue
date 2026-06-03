@@ -12,6 +12,10 @@ const props = defineProps({
 const videoFrame = ref(null)
 
 const hasVideoEmbed = computed(() => Boolean(props.project.videoEmbed?.embedUrl))
+const hasCustomPoster = computed(() => {
+  const poster = props.project.media?.poster
+  return hasVideoEmbed.value && poster && poster !== '/media/video-poster.svg'
+})
 
 const sendPlayerMessage = (message, origin) => {
   if (!videoFrame.value?.contentWindow) return
@@ -63,6 +67,12 @@ const pauseVideo = () => {
         allow="autoplay; fullscreen; picture-in-picture"
         allowfullscreen
       ></iframe>
+      <img
+        v-if="hasCustomPoster"
+        class="media-fill media-poster"
+        :src="project.media.poster"
+        :alt="project.media.alt"
+      />
       <video
         v-else-if="project.type === 'video'"
         class="media-fill"

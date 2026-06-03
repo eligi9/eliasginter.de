@@ -182,7 +182,7 @@
     "media": {
       "kind": "video",
       "src": null,
-      "poster": "/media/video-poster.svg",
+      "poster": "/media/bad-influence-thumbnail.png",
       "alt": "BadInfluence als Stop-Motion-Film ueber eine lebendige Hand als schlechten Einfluss"
     },
     "videoEmbed": {
@@ -216,7 +216,7 @@
     "media": {
       "kind": "video",
       "src": null,
-      "poster": "/media/video-poster.svg",
+      "poster": "/media/cut-n-copy-thumbnail.png",
       "alt": "Cut N Copy als audiovisuelle Komposition aus Alltagssounds und Handlungen"
     },
     "videoEmbed": {
