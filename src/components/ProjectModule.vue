@@ -82,7 +82,12 @@ const pauseVideo = () => {
         playsinline
         :poster="project.media.poster"
       ></video>
-      <img v-else class="media-fill" :src="project.media.src" :alt="project.media.alt" />
+      <img
+        v-else
+        class="media-fill media-image"
+        :src="project.media.src"
+        :alt="project.media.alt"
+      />
     </div>
 
     <div class="project-info">

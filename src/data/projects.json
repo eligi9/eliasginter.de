@@ -148,6 +148,43 @@
     "featured": true
   },
   {
+    "id": "the-picture-game",
+    "title": "The Picture Game",
+    "kicker": "Digital Design / Interactive Experience",
+    "type": "webapp",
+    "year": null,
+    "status": "Prototype",
+    "description": "Ein soziales Foto-Game, das taegliche Themen nicht dokumentarisch, sondern durch persoenliche Bildinterpretationen beantwortet.",
+    "summary": "The Picture Game verwandelt die Smartphonekamera in ein spielerisches Kommunikationswerkzeug: Jeden Tag entsteht aus einem Begriff eine Sammlung subjektiver Sichtweisen. Das Projekt verbindet Foto-Challenge, Voting und Themenwahl zu einem sozialen Kreislauf, in dem Nutzer nicht nur Bilder hochladen, sondern den naechsten Spieltag mitbestimmen.",
+    "abstract": "The Picture Game ist eine agile Webanwendung, die ein soziales Foto-Spiel fuer den Alltag entwirft. Im Zentrum steht nicht das moeglichst realistische Festhalten eines Moments, sondern die Frage, wie unterschiedlich Menschen denselben Themenbegriff visuell interpretieren.\n\nEin Spieltag besteht aus drei Phasen. In der Einsendungsphase wird ein aktuelles Thema veroeffentlicht und Nutzer koennen einmal pro Tag ein Foto mit ihrer Smartphonekamera hochladen. In der Bewertungsphase werden die Beitraege der anderen sichtbar und die Community stimmt fuer ihr Lieblingsbild ab. In der Siegerphase wird der Gewinner informiert und darf aus vorgeschlagenen Begriffen ein neues Thema fuer den naechsten Durchlauf auswaehlen.\n\nDadurch entsteht ein kleiner sozialer Rhythmus aus Aufgabe, Interpretation, Vergleich und Mitgestaltung. Das Projekt verbindet Interaction Design, Webentwicklung und Game Mechanics zu einer Anwendung, die Fotografie weniger als Abbild und mehr als persoenliche Antwort versteht. Entwickelt wurde The Picture Game im Modul \"Agile Webanwendung mit Python\" als Teamarbeit mit Bastian Roegele und Elias Ginter. Das Backend wurde mit Django umgesetzt.",
+    "role": ["Concept", "Interaction Design", "Frontend Development", "Backend Development"],
+    "tools": ["Django", "Python", "PyCharm", "Web App", "Agile Development"],
+    "tags": ["Digital Design", "Interactive Experience", "Webapp", "Social Game", "Photography"],
+    "themes": ["Fotografische Interpretation", "Community Voting", "Taegliche Challenge", "Spielmechanik", "Themenwahl"],
+    "interaction": {
+      "input": "Taeglicher Foto-Upload zu einem vorgegebenen Themenbegriff",
+      "output": "Community-Voting, Gewinnerstatus und Auswahl des naechsten Themas",
+      "phases": ["Einsendungsphase", "Bewertungsphase", "Siegerphase"]
+    },
+    "collaboration": {
+      "with": ["Bastian Roegele", "Elias Ginter"],
+      "context": "Agile Webanwendung mit Python"
+    },
+    "media": {
+      "kind": "image",
+      "src": "/media/the-picture-game-thumbnail.png",
+      "poster": null,
+      "alt": "The Picture Game als mobile Foto-Game Webanwendung"
+    },
+    "videoEmbed": null,
+    "links": {
+      "live": null,
+      "repository": null,
+      "caseStudy": null
+    },
+    "featured": true
+  },
+  {
     "id": "moodtranslator",
     "title": "MoodTranslator",
     "kicker": "Abstract Concept / Physical Interface",

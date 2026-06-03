@@ -148,6 +148,14 @@ a {
   object-fit: cover;
 }
 
+.media-image {
+  transition: transform 520ms ease;
+}
+
+.project-media:hover .media-image {
+  transform: scale(1.045);
+}
+
 .media-embed {
   position: absolute;
   inset: 0;
