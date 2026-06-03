@@ -47,6 +47,9 @@ const sortedProjects = [...projects].sort((a, b) => {
         <p class="section-kicker">Profil</p>
         <h2 id="profile-title">Student der interaktiven Medien zwischen Informatik und Design.</h2>
       </div>
+      <figure class="profile-portrait">
+        <img src="/media/elias-ginter-portrait.jpg" alt="Portrait von Elias Ginter" />
+      </figure>
       <p>
         Ich entwickle Konzepte, Webinterfaces, audiovisuelle Arbeiten und interaktive
         Prototypen. Dieses Portfolio ist modular aufgebaut: Jede Arbeit kann als grosses
