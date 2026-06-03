@@ -20,9 +20,9 @@ defineProps({
         muted
         loop
         playsinline
-        poster="/media/video-poster.svg"
+        :poster="project.media.poster"
       ></video>
-      <img v-else class="media-fill" src="/media/concept-board.svg" alt="" />
+      <img v-else class="media-fill" :src="project.media.src" :alt="project.media.alt" />
     </div>
 
     <div class="project-info">
@@ -30,7 +30,7 @@ defineProps({
       <h2>{{ project.title }}</h2>
       <p>{{ project.description }}</p>
       <ul aria-label="Schlagworte">
-        <li v-for="item in project.meta" :key="item">{{ item }}</li>
+        <li v-for="item in project.tags" :key="item">{{ item }}</li>
       </ul>
     </div>
   </article>

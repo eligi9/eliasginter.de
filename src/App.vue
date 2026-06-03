@@ -1,33 +1,7 @@
 <script setup>
 import ProjectModule from './components/ProjectModule.vue'
 import P5Canvas from './components/P5Canvas.vue'
-
-const projects = [
-  {
-    kicker: 'Webapp / Interaction',
-    title: 'Interface als Spielfeld',
-    type: 'p5',
-    description:
-      'Ein experimenteller Sketch fuer generative Navigation, Bewegung und direkte Interaktion.',
-    meta: ['p5.js', 'Vue', 'Prototyping'],
-  },
-  {
-    kicker: 'Video / Schnitt',
-    title: 'Rhythmus im Stadtraum',
-    type: 'video',
-    description:
-      'Kurzer Video-Case mit grossflaechiger Praesentation und knappem Kontext zum Konzept.',
-    meta: ['Editing', 'Sound', 'Konzept'],
-  },
-  {
-    kicker: 'Design / Konzept',
-    title: 'Visuelles System',
-    type: 'image',
-    description:
-      'Bildstarke Dokumentation fuer Gestaltungskonzepte, Mockups, Fotos oder Prozessmaterial.',
-    meta: ['Branding', 'Layout', 'Research'],
-  },
-]
+import projects from './data/projects.json'
 </script>
 
 <template>
