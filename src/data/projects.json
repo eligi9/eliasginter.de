@@ -164,5 +164,39 @@
       "caseStudy": null
     },
     "featured": true
+  },
+  {
+    "id": "badinfluence",
+    "title": "BadInfluence",
+    "kicker": "Abstract Concept / Film",
+    "type": "video",
+    "year": "2022",
+    "status": "Completed",
+    "description": "Ein Stop-Motion-Film ueber eine unsichtbare Kraft, die als lebendige Hand in den Alltag einer gewoehnlichen Person eingreift.",
+    "summary": "Ein Madmotion-Film, in dem der schlechte Einfluss die Kontrolle ueber ein ordentliches, angepasstes Leben gewinnt.",
+    "abstract": "BadInfluence zeigt den schlechten Einfluss als koerperhafte, fast eigenstaendige Figur: eine Hand, die in das Leben einer scheinbar normalen Person eingreift und nach und nach die Kontrolle uebernimmt.\n\nDurch Stop Motion werden Handlungen sichtbar, die in der Realitaet so nicht moeglich waeren. Der Film nutzt die kuenstliche Bewegung nicht nur als Technik, sondern als konzeptuelles Mittel: Das Unsichtbare bekommt eine Form, der innere Impuls wird zu einer physischen Kraft. So entsteht ein surrealer Konflikt zwischen Routine, Selbstkontrolle und der Verlockung, ihr zu entkommen.",
+    "role": ["Concept", "Stop Motion", "Film", "Editing"],
+    "tools": ["Stop Motion", "Camera", "Video Editing"],
+    "tags": ["Abstract Concept", "Film", "Stop Motion", "Surreal", "Influence"],
+    "themes": ["Einfluss", "Kontrolle", "Alltag", "Versuchung", "Surrealitaet"],
+    "media": {
+      "kind": "video",
+      "src": null,
+      "poster": "/media/video-poster.svg",
+      "alt": "BadInfluence als Stop-Motion-Film ueber eine lebendige Hand als schlechten Einfluss"
+    },
+    "videoEmbed": {
+      "provider": "youtube",
+      "url": "https://youtu.be/HIGvrwvvTaA",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/HIGvrwvvTaA?enablejsapi=1&controls=0&rel=0&modestbranding=1&playsinline=1&loop=1&playlist=HIGvrwvvTaA&disablekb=1&fs=0&iv_load_policy=3",
+      "background": true,
+      "controls": false
+    },
+    "links": {
+      "live": null,
+      "repository": null,
+      "caseStudy": null
+    },
+    "featured": true
   }
 ]
