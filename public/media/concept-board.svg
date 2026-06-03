@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Abstraktes Konzeptboard</title>
+  <desc id="desc">Grosse abstrakte Flaeche als Platzhalter fuer Portfolio-Bilder.</desc>
+  <rect width="1800" height="1200" fill="#111315"/>
+  <rect x="90" y="120" width="540" height="740" fill="#e9dfc8"/>
+  <rect x="690" y="190" width="930" height="460" fill="#6fcabd"/>
+  <rect x="740" y="250" width="520" height="310" fill="#17191c"/>
+  <circle cx="1360" cy="810" r="240" fill="#f06d4f"/>
+  <rect x="210" y="900" width="690" height="130" fill="#f4f1e8"/>
+  <rect x="980" y="760" width="180" height="300" fill="#dde152"/>
+  <path d="M1180 930 C1310 620 1510 530 1690 440" fill="none" stroke="#f4f1e8" stroke-width="18"/>
+  <g fill="#111315" opacity=".82">
+    <circle cx="790" cy="300" r="8"/>
+    <circle cx="850" cy="350" r="8"/>
+    <circle cx="910" cy="400" r="8"/>
+    <circle cx="970" cy="450" r="8"/>
+    <circle cx="1030" cy="500" r="8"/>
+  </g>
+</svg>

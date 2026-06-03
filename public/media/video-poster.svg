@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1000" viewBox="0 0 1800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Videoposter Platzhalter</title>
+  <desc id="desc">Dynamischer Poster-Platzhalter fuer Videoarbeiten.</desc>
+  <rect width="1800" height="1000" fill="#151719"/>
+  <rect x="110" y="120" width="1580" height="760" fill="#202429"/>
+  <path d="M130 760 L560 350 L910 590 L1250 270 L1670 710 L1670 880 L130 880 Z" fill="#6fcabd"/>
+  <path d="M710 330 L710 690 L1040 510 Z" fill="#f4f1e8"/>
+  <rect x="110" y="120" width="1580" height="760" fill="none" stroke="#f06d4f" stroke-width="22"/>
+</svg>
