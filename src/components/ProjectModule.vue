@@ -16,6 +16,15 @@ const hasVideoEmbed = computed(() => Boolean(props.project.videoEmbed?.embedUrl)
 const sendVideoCommand = (method) => {
   if (!videoFrame.value?.contentWindow) return
 
+  if (props.project.videoEmbed?.provider === 'youtube') {
+    const youtubeMethod = method === 'play' ? 'playVideo' : 'pauseVideo'
+    videoFrame.value.contentWindow.postMessage(
+      JSON.stringify({ event: 'command', func: youtubeMethod, args: [] }),
+      'https://www.youtube-nocookie.com',
+    )
+    return
+  }
+
   videoFrame.value.contentWindow.postMessage(
     JSON.stringify({ method }),
     'https://player.vimeo.com',
