@@ -97,7 +97,7 @@ onMounted(async () => {
 
     const drawBackgroundSystem = () => {
       sketch.background(13, 15, 17)
-      sketch.stroke(244, 241, 232, 14)
+      sketch.stroke(244, 241, 232, 32)
       sketch.strokeWeight(1)
 
       for (let x = sketch.width / 8; x < sketch.width; x += sketch.width / 8) {
@@ -107,6 +107,11 @@ onMounted(async () => {
       for (let y = sketch.height / 8; y < sketch.height; y += sketch.height / 8) {
         sketch.line(0, y, sketch.width, y)
       }
+
+      sketch.stroke(111, 202, 189, 18)
+      sketch.strokeWeight(1.5)
+      sketch.line(sketch.width * 0.5, 0, sketch.width * 0.5, sketch.height)
+      sketch.line(0, sketch.height * 0.5, sketch.width, sketch.height * 0.5)
     }
 
     sketch.setup = () => {
