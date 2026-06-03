@@ -31,6 +31,44 @@
     "featured": true
   },
   {
+    "id": "lonis-weltraumreise",
+    "title": "Lonis Weltraumreise",
+    "kicker": "Digital Design / Interactive Experience",
+    "type": "webapp",
+    "year": null,
+    "status": "Completed",
+    "description": "Eine interaktive Webapplikation, die Eltern und Kindern hilft, eine Krebserkrankung und moegliche Therapieformen kindgerecht ueber eine Geschichte zu entdecken.",
+    "summary": "Eine digitale, narrative Experience ueber Kommunikation, Fuersorge und kindgerechte Vermittlung in einer belastenden Lebenssituation.",
+    "abstract": "Lonis Weltraumreise ist eine Webapplikation, die in Kooperation mit der Organisation \"Tigerherz - Wenn Eltern Krebs haben\", einem Angebot des Tumorzentrums Freiburg-CCCF, entstanden ist.\n\nIm Vordergrund steht die Frage, auf welche Art man eine Krebserkrankung mit den eigenen Kindern kommuniziert. Lonis Weltraumreise ist eine interaktive Geschichte, die es Eltern zusammen mit ihren Kindern erlaubt, ihre Erkrankung sowie moegliche Therapieformen zu entdecken.\n\nDie Kommunikation erfolgt dadurch nicht auf einem rein verbalen Weg, sondern auf kindgerechte Weise, verpackt in eine Geschichte.",
+    "role": ["Digital Design", "Interaction Design", "Concept", "Frontend Development"],
+    "tools": ["Web Design", "Frontend Development", "Storytelling"],
+    "tags": ["Digital Design", "Interactive Experience", "Webapp", "Storytelling", "Healthcare"],
+    "themes": ["Kindgerechte Kommunikation", "Krankheit", "Familie", "Entdecken", "Narrative Experience"],
+    "collaboration": {
+      "with": ["Tigerherz - Wenn Eltern Krebs haben", "Tumorzentrum Freiburg-CCCF"],
+      "context": "Kooperationsprojekt"
+    },
+    "media": {
+      "kind": "video",
+      "src": null,
+      "poster": "/media/video-poster.svg",
+      "alt": "Lonis Weltraumreise als interaktive Webapplikation fuer Eltern und Kinder"
+    },
+    "videoEmbed": {
+      "provider": "vimeo",
+      "url": null,
+      "embedUrl": null,
+      "background": true,
+      "controls": false
+    },
+    "links": {
+      "live": null,
+      "repository": null,
+      "caseStudy": null
+    },
+    "featured": true
+  },
+  {
     "id": "interface-als-spielfeld",
     "title": "Interface als Spielfeld",
     "kicker": "Webapp / Interaction",
