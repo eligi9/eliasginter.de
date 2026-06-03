@@ -1,26 +1,41 @@
 <script setup>
+import { computed, ref } from 'vue'
 import P5Canvas from './P5Canvas.vue'
 
-defineProps({
+const props = defineProps({
   project: {
     type: Object,
     required: true,
   },
 })
+
+const isVideoHovered = ref(false)
+
+const hasVideoEmbed = computed(() => Boolean(props.project.videoEmbed?.embedUrl))
 </script>
 
 <template>
   <article class="project-module">
-    <div class="project-media">
+    <div
+      class="project-media"
+      @mouseenter="isVideoHovered = true"
+      @mouseleave="isVideoHovered = false"
+    >
       <P5Canvas v-if="project.type === 'p5'" />
       <iframe
-        v-else-if="project.videoEmbed?.embedUrl"
+        v-else-if="hasVideoEmbed && isVideoHovered"
         class="media-fill media-embed"
         :src="project.videoEmbed.embedUrl"
         :title="`${project.title} Video`"
         allow="autoplay; fullscreen; picture-in-picture"
         allowfullscreen
       ></iframe>
+      <img
+        v-else-if="hasVideoEmbed"
+        class="media-fill"
+        :src="project.media.poster"
+        :alt="project.media.alt"
+      />
       <video
         v-else-if="project.type === 'video'"
         class="media-fill"
