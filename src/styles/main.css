@@ -151,19 +151,29 @@ a {
 .media-embed {
   position: absolute;
   inset: 0;
+  z-index: 1;
   border: 0;
   opacity: 0;
-  transition: opacity 180ms ease;
+  pointer-events: none;
+  visibility: hidden;
+  transition:
+    opacity 180ms ease,
+    visibility 0ms linear 180ms;
 }
 
 .media-poster {
   position: absolute;
   inset: 0;
+  z-index: 2;
   transition: opacity 180ms ease;
 }
 
 .project-media:hover .media-embed {
+  z-index: 3;
   opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transition: opacity 180ms ease;
 }
 
 .project-media:hover .media-poster {
