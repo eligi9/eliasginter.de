@@ -1,5 +1,36 @@
 [
   {
+    "id": "riss",
+    "title": "Riss",
+    "kicker": "Abstract Concept / Film",
+    "type": "video",
+    "year": null,
+    "status": "Completed",
+    "description": "Ein abstraktes Filmkonzept ueber Zerrissenheit, Autonomie und die Bewegung zwischen einer farbenfrohen Innenwelt und einer kalten, kargen Realitaet.",
+    "summary": "Eine Taenzerin bewegt sich zwischen zwei Sphaeren: harmonische Farbigkeit trifft auf Beton, Tiefgarage und kalte Wirklichkeit.",
+    "abstract": "Der Riss markiert die Grenze zwischen zwei Realit\u00e4ten: einer d\u00fcsteren, kalten Welt, geerdet in Fakten und einer farbenfrohen, leichtf\u00fc\u00dfigen Welt. Das Filmprojekt \"Riss\" erkundet die Kraft der Emotionen und die Bewegung zwischen diesen unterschiedlichen Sph\u00e4ren. Es beleuchtet den inneren Kampf um Autonomie - die Selbstbestimmung der eigenen Realit\u00e4t.\n\n\"Riss\" ist ein Filmprojekt in Kooperation mit der T\u00e4nzerin Christine Kuckuck, das im Rahmen von \"Dance, Draw & Dance\", eines fach\u00fcbergreifenden Semesterkonzepts, entstanden ist.\n\nDas Ergebnis war ein Videoprojekt, bei dem wir eine Verbindung zwischen der reinen Tanzkunst, der filmischen Aufzeichnung und der Erweiterung und Verst\u00e4rkung der vom T\u00e4nzer ausgedr\u00fcckten Emotionen suchten.",
+    "role": ["Concept", "Film", "Editing", "Visual Direction"],
+    "tools": ["Camera", "Video Editing", "Concept Development"],
+    "tags": ["Abstract Concept", "Film", "Dance", "Emotion", "Contrast"],
+    "themes": ["Zerrissenheit", "Autonomie", "Realitaet", "Innenwelt", "Koerper"],
+    "collaboration": {
+      "with": ["Christine Kuckuck"],
+      "context": "Dance, Draw & Dance"
+    },
+    "media": {
+      "kind": "video",
+      "src": null,
+      "poster": "/media/video-poster.svg",
+      "alt": "Filmprojekt Riss ueber eine Taenzerin zwischen farbenfroher Innenwelt und kalter Realitaet"
+    },
+    "links": {
+      "live": null,
+      "repository": null,
+      "caseStudy": null
+    },
+    "featured": true
+  },
+  {
     "id": "interface-als-spielfeld",
     "title": "Interface als Spielfeld",
     "kicker": "Webapp / Interaction",
