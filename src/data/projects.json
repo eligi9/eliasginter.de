@@ -92,7 +92,7 @@
     "media": {
       "kind": "video",
       "src": null,
-      "poster": "/media/video-poster.svg",
+      "poster": "/media/easyjam-thumbnail.png",
       "alt": "EasyJam als mobile Webapplikation zum Erstellen eigener Backing Tracks"
     },
     "videoEmbed": {
