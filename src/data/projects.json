@@ -80,7 +80,7 @@
     "title": "MoodTranslator",
     "kicker": "Abstract Concept / Physical Interface",
     "type": "physical-interface",
-    "year": null,
+    "year": "2022",
     "status": "Prototype",
     "description": "Ein physisches Interface, das Gesichtsausdruecke erkennt und emotionale Zustaende in abstrakte Lichtsignale uebersetzt.",
     "summary": "Ein Experiment ueber die Detektion, Abstraktion und externe Darstellung von Emotion durch ein nicht-menschliches Gegenueber.",
