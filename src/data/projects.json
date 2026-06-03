@@ -57,7 +57,7 @@
     "videoEmbed": {
       "provider": "vimeo",
       "url": "https://vimeo.com/1092231191",
-      "embedUrl": "https://player.vimeo.com/video/1092231191?background=1&autoplay=1&loop=1&muted=1&controls=0",
+      "embedUrl": "https://player.vimeo.com/video/1092231191?muted=1&loop=1&controls=0&autopause=0",
       "background": true,
       "controls": false
     },

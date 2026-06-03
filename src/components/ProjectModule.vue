@@ -9,33 +9,51 @@ const props = defineProps({
   },
 })
 
-const isVideoHovered = ref(false)
+const videoFrame = ref(null)
 
 const hasVideoEmbed = computed(() => Boolean(props.project.videoEmbed?.embedUrl))
+
+const sendVideoCommand = (method) => {
+  if (!videoFrame.value?.contentWindow) return
+
+  videoFrame.value.contentWindow.postMessage(
+    JSON.stringify({ method }),
+    'https://player.vimeo.com',
+  )
+}
+
+const playVideo = () => {
+  sendVideoCommand('play')
+}
+
+const pauseVideo = () => {
+  sendVideoCommand('pause')
+}
 </script>
 
 <template>
   <article class="project-module">
     <div
       class="project-media"
-      @mouseenter="isVideoHovered = true"
-      @mouseleave="isVideoHovered = false"
+      @mouseenter="playVideo"
+      @mouseleave="pauseVideo"
     >
       <P5Canvas v-if="project.type === 'p5'" />
-      <iframe
-        v-else-if="hasVideoEmbed && isVideoHovered"
-        class="media-fill media-embed"
-        :src="project.videoEmbed.embedUrl"
-        :title="`${project.title} Video`"
-        allow="autoplay; fullscreen; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-      <img
-        v-else-if="hasVideoEmbed"
-        class="media-fill"
-        :src="project.media.poster"
-        :alt="project.media.alt"
-      />
+      <template v-else-if="hasVideoEmbed">
+        <img
+          class="media-fill media-poster"
+          :src="project.media.poster"
+          :alt="project.media.alt"
+        />
+        <iframe
+          ref="videoFrame"
+          class="media-fill media-embed"
+          :src="project.videoEmbed.embedUrl"
+          :title="`${project.title} Video`"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </template>
       <video
         v-else-if="project.type === 'video'"
         class="media-fill"

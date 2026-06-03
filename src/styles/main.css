@@ -120,7 +120,9 @@ a {
 }
 
 .project-media {
+  position: relative;
   min-height: 100vh;
+  overflow: hidden;
   background: #151719;
 }
 
@@ -147,7 +149,25 @@ a {
 }
 
 .media-embed {
+  position: absolute;
+  inset: 0;
   border: 0;
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.media-poster {
+  position: absolute;
+  inset: 0;
+  transition: opacity 180ms ease;
+}
+
+.project-media:hover .media-embed {
+  opacity: 1;
+}
+
+.project-media:hover .media-poster {
+  opacity: 0;
 }
 
 .project-info {
