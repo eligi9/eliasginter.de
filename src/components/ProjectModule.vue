@@ -13,25 +13,31 @@ const videoFrame = ref(null)
 
 const hasVideoEmbed = computed(() => Boolean(props.project.videoEmbed?.embedUrl))
 
-const sendVideoCommand = (method) => {
+const sendPlayerMessage = (message, origin) => {
   if (!videoFrame.value?.contentWindow) return
 
+  videoFrame.value.contentWindow.postMessage(JSON.stringify(message), origin)
+}
+
+const sendVideoCommand = (method) => {
   if (props.project.videoEmbed?.provider === 'youtube') {
     const youtubeMethod = method === 'play' ? 'playVideo' : 'pauseVideo'
-    videoFrame.value.contentWindow.postMessage(
-      JSON.stringify({ event: 'command', func: youtubeMethod, args: [] }),
-      'https://www.youtube-nocookie.com',
-    )
+    sendPlayerMessage({ event: 'command', func: youtubeMethod, args: [] }, 'https://www.youtube-nocookie.com')
     return
   }
 
-  videoFrame.value.contentWindow.postMessage(
-    JSON.stringify({ method }),
-    'https://player.vimeo.com',
-  )
+  sendPlayerMessage({ method }, 'https://player.vimeo.com')
 }
 
 const playVideo = () => {
+  if (props.project.videoEmbed?.provider === 'youtube') {
+    sendPlayerMessage({ event: 'command', func: 'unMute', args: [] }, 'https://www.youtube-nocookie.com')
+    sendPlayerMessage({ event: 'command', func: 'setVolume', args: [100] }, 'https://www.youtube-nocookie.com')
+    sendPlayerMessage({ event: 'command', func: 'playVideo', args: [] }, 'https://www.youtube-nocookie.com')
+    return
+  }
+
+  sendPlayerMessage({ method: 'setVolume', value: 1 }, 'https://player.vimeo.com')
   sendVideoCommand('play')
 }
 
