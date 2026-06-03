@@ -2,6 +2,13 @@
 import ProjectModule from './components/ProjectModule.vue'
 import P5Canvas from './components/P5Canvas.vue'
 import projects from './data/projects.json'
+
+const sortedProjects = [...projects].sort((a, b) => {
+  const yearA = Number(a.year) || 0
+  const yearB = Number(b.year) || 0
+
+  return yearB - yearA
+})
 </script>
 
 <template>
@@ -29,7 +36,7 @@ import projects from './data/projects.json'
 
     <section id="arbeiten" class="project-stack" aria-label="Ausgewaehlte Arbeiten">
       <ProjectModule
-        v-for="project in projects"
+        v-for="project in sortedProjects"
         :key="project.title"
         :project="project"
       />
