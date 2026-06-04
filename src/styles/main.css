@@ -102,6 +102,10 @@ a {
 .nav-letter span {
   position: relative;
   display: inline-block;
+  text-decoration-color: transparent;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
 }
 
 .nav-letter span::after {
@@ -109,6 +113,13 @@ a {
   position: absolute;
   top: 100%;
   left: 0;
+  text-decoration: inherit;
+  text-decoration-color: inherit;
+  text-underline-offset: inherit;
+}
+
+.nav-letter.is-rolling span {
+  text-decoration-color: currentColor;
 }
 
 .nav-letter.is-rolling span {
