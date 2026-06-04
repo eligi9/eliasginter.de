@@ -54,6 +54,9 @@ a {
 }
 
 .site-nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   height: 100%;
@@ -67,6 +70,51 @@ a {
   align-items: center;
   height: 100%;
   line-height: 1;
+}
+
+.nav-label {
+  display: flex;
+  overflow: hidden;
+  line-height: 1;
+}
+
+.nav-label span {
+  position: relative;
+  display: inline-block;
+  transition: transform 360ms cubic-bezier(0.76, 0, 0.24, 1);
+  transition-delay: calc(var(--letter-index, 0) * 24ms);
+}
+
+.nav-label span::after {
+  content: attr(data-char);
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.site-nav a:hover .nav-label span,
+.site-nav a:focus-visible .nav-label span {
+  transform: translateY(-100%);
+}
+
+.nav-label span:nth-child(1) {
+  --letter-index: 0;
+}
+
+.nav-label span:nth-child(2) {
+  --letter-index: 1;
+}
+
+.nav-label span:nth-child(3) {
+  --letter-index: 2;
+}
+
+.nav-label span:nth-child(4) {
+  --letter-index: 3;
+}
+
+.nav-label span:nth-child(5) {
+  --letter-index: 4;
 }
 
 .hero {

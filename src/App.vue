@@ -15,8 +15,23 @@ const sortedProjects = [...projects].sort((a, b) => {
   <header class="site-header">
     <a class="wordmark" href="#top" aria-label="Zum Anfang">Elias Ginter</a>
     <nav class="site-nav" aria-label="Hauptnavigation">
-      <a href="#arbeiten">Work</a>
-      <a href="#profil">About</a>
+      <a href="#arbeiten" aria-label="Work">
+        <span class="nav-label" aria-hidden="true">
+          <span data-char="W">W</span>
+          <span data-char="o">o</span>
+          <span data-char="r">r</span>
+          <span data-char="k">k</span>
+        </span>
+      </a>
+      <a href="#profil" aria-label="About">
+        <span class="nav-label" aria-hidden="true">
+          <span data-char="A">A</span>
+          <span data-char="b">b</span>
+          <span data-char="o">o</span>
+          <span data-char="u">u</span>
+          <span data-char="t">t</span>
+        </span>
+      </a>
     </nav>
   </header>
 
