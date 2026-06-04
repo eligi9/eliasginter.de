@@ -17,19 +17,19 @@ const sortedProjects = [...projects].sort((a, b) => {
     <nav class="site-nav" aria-label="Hauptnavigation">
       <a href="#arbeiten" aria-label="Work">
         <span class="nav-label" aria-hidden="true">
-          <span data-char="W">W</span>
-          <span data-char="o">o</span>
-          <span data-char="r">r</span>
-          <span data-char="k">k</span>
+          <span class="nav-letter"><span data-char="W">W</span></span>
+          <span class="nav-letter"><span data-char="o">o</span></span>
+          <span class="nav-letter"><span data-char="r">r</span></span>
+          <span class="nav-letter"><span data-char="k">k</span></span>
         </span>
       </a>
       <a href="#profil" aria-label="About">
         <span class="nav-label" aria-hidden="true">
-          <span data-char="A">A</span>
-          <span data-char="b">b</span>
-          <span data-char="o">o</span>
-          <span data-char="u">u</span>
-          <span data-char="t">t</span>
+          <span class="nav-letter"><span data-char="A">A</span></span>
+          <span class="nav-letter"><span data-char="b">b</span></span>
+          <span class="nav-letter"><span data-char="o">o</span></span>
+          <span class="nav-letter"><span data-char="u">u</span></span>
+          <span class="nav-letter"><span data-char="t">t</span></span>
         </span>
       </a>
     </nav>
