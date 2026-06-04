@@ -81,8 +81,13 @@ a {
   position: relative;
   display: inline-block;
   height: 1.22em;
-  overflow: hidden;
   vertical-align: bottom;
+}
+
+.nav-letter-window {
+  display: block;
+  height: 1em;
+  overflow: hidden;
 }
 
 .nav-letter-track {
@@ -91,32 +96,56 @@ a {
 
 .nav-face {
   display: block;
-  height: 1.22em;
+  height: 1em;
   line-height: 1;
 }
 
-.nav-underline {
+.nav-underline-window {
   position: absolute;
   left: -0.5px;
   right: -0.5px;
   bottom: 0;
   height: 1px;
-  background: currentColor;
+  overflow: hidden;
   opacity: 0;
   pointer-events: none;
 }
 
-.site-nav a:hover .nav-underline,
-.site-nav a:focus-visible .nav-underline,
-.nav-letter.is-rolling .nav-underline {
+.nav-label.is-active .nav-underline-window,
+.site-nav a:focus-visible .nav-underline-window,
+.nav-letter.is-rolling .nav-underline-window {
   opacity: 1;
+}
+
+.nav-underline-track {
+  display: block;
+}
+
+.nav-underline {
+  display: block;
+  height: 1px;
+  background: currentColor;
 }
 
 .nav-letter.is-rolling .nav-letter-track {
   animation: nav-letter-roll 420ms cubic-bezier(0.76, 0, 0.24, 1) both;
 }
 
+.nav-letter.is-rolling .nav-underline-track {
+  animation: nav-underline-roll 420ms cubic-bezier(0.76, 0, 0.24, 1) both;
+}
+
 @keyframes nav-letter-roll {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes nav-underline-roll {
   0% {
     transform: translateY(0);
   }
