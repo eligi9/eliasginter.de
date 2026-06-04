@@ -45,11 +45,10 @@ const resetLetter = (event) => {
             <span class="nav-letter-track">
               <span class="nav-face">
                 <span>{{ letter }}</span>
-                <span class="nav-underline"></span>
+                <span class="nav-underline nav-underline-original"></span>
               </span>
               <span class="nav-face">
                 <span>{{ letter }}</span>
-                <span class="nav-underline"></span>
               </span>
             </span>
           </span>

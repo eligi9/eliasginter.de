@@ -97,8 +97,8 @@ a {
 
 .nav-underline {
   position: absolute;
-  left: 0;
-  right: 0;
+  left: -0.5px;
+  right: -0.5px;
   bottom: 0;
   height: 1px;
   background: currentColor;
