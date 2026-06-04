@@ -56,9 +56,17 @@ a {
 .site-nav {
   display: flex;
   align-items: center;
+  height: 100%;
   gap: clamp(14px, 2.4vw, 34px);
   font-size: 0.98rem;
   font-weight: 680;
+}
+
+.site-nav a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  line-height: 1;
 }
 
 .hero {
