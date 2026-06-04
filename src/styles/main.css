@@ -57,7 +57,8 @@ a {
   display: flex;
   align-items: center;
   gap: clamp(14px, 2.4vw, 34px);
-  font-size: 0.82rem;
+  font-size: 0.98rem;
+  font-weight: 680;
 }
 
 .hero {
