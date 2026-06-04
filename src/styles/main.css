@@ -78,6 +78,7 @@ a {
 }
 
 .nav-letter {
+  position: relative;
   display: inline-block;
   height: 1.22em;
   overflow: hidden;
@@ -89,7 +90,6 @@ a {
 }
 
 .nav-face {
-  position: relative;
   display: block;
   height: 1.22em;
   line-height: 1;
@@ -103,6 +103,7 @@ a {
   height: 1px;
   background: currentColor;
   opacity: 0;
+  pointer-events: none;
 }
 
 .site-nav a:hover .nav-underline,

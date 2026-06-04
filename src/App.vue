@@ -1,6 +1,7 @@
 <script setup>
 import ProjectModule from './components/ProjectModule.vue'
 import P5Canvas from './components/P5Canvas.vue'
+import RollingNavLink from './components/RollingNavLink.vue'
 import projects from './data/projects.json'
 
 const sortedProjects = [...projects].sort((a, b) => {
@@ -14,46 +15,18 @@ const navItems = [
   { href: '#arbeiten', label: 'Work' },
   { href: '#profil', label: 'About' },
 ]
-
-const rollLetter = (event) => {
-  event.currentTarget.classList.add('is-rolling')
-}
-
-const resetLetter = (event) => {
-  event.currentTarget.classList.remove('is-rolling')
-}
 </script>
 
 <template>
   <header class="site-header">
     <a class="wordmark" href="#top" aria-label="Zum Anfang">Elias Ginter</a>
     <nav class="site-nav" aria-label="Hauptnavigation">
-      <a
+      <RollingNavLink
         v-for="item in navItems"
         :key="item.href"
         :href="item.href"
-        :aria-label="item.label"
-      >
-        <span class="nav-label" aria-hidden="true">
-          <span
-            v-for="(letter, index) in item.label.split('')"
-            :key="`${item.href}-${letter}-${index}`"
-            class="nav-letter"
-            @mouseenter="rollLetter"
-            @animationend="resetLetter"
-          >
-            <span class="nav-letter-track">
-              <span class="nav-face">
-                <span>{{ letter }}</span>
-                <span class="nav-underline nav-underline-original"></span>
-              </span>
-              <span class="nav-face">
-                <span>{{ letter }}</span>
-              </span>
-            </span>
-          </span>
-        </span>
-      </a>
+        :label="item.label"
+      />
     </nav>
   </header>
 
