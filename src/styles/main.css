@@ -96,7 +96,7 @@ a {
   left: 0;
 }
 
-.site-nav a:hover .nav-letter span,
+.nav-letter:hover span,
 .site-nav a:focus-visible .nav-letter span {
   transform: translateY(-100%);
 }
