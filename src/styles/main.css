@@ -79,35 +79,39 @@ a {
 
 .nav-letter {
   display: inline-block;
+  height: 1.22em;
   overflow: hidden;
+  vertical-align: bottom;
 }
 
-.nav-letter span {
+.nav-letter-track {
+  display: block;
+}
+
+.nav-face {
   position: relative;
-  display: inline-block;
-  text-decoration-color: transparent;
-  text-decoration-line: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.18em;
+  display: block;
+  height: 1.22em;
+  line-height: 1;
 }
 
-.nav-letter span::after {
-  content: attr(data-char);
+.nav-underline {
   position: absolute;
-  top: 100%;
   left: 0;
-  text-decoration: inherit;
-  text-decoration-color: inherit;
-  text-underline-offset: inherit;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: currentColor;
+  opacity: 0;
 }
 
-.site-nav a:hover .nav-letter span,
-.site-nav a:focus-visible .nav-letter span,
-.nav-letter.is-rolling span {
-  text-decoration-color: currentColor;
+.site-nav a:hover .nav-underline,
+.site-nav a:focus-visible .nav-underline,
+.nav-letter.is-rolling .nav-underline {
+  opacity: 1;
 }
 
-.nav-letter.is-rolling span {
+.nav-letter.is-rolling .nav-letter-track {
   animation: nav-letter-roll 420ms cubic-bezier(0.76, 0, 0.24, 1) both;
 }
 
@@ -117,7 +121,7 @@ a {
   }
 
   100% {
-    transform: translateY(-100%);
+    transform: translateY(-50%);
   }
 }
 

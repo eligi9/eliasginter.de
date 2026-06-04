@@ -10,6 +10,11 @@ const sortedProjects = [...projects].sort((a, b) => {
   return yearB - yearA
 })
 
+const navItems = [
+  { href: '#arbeiten', label: 'Work' },
+  { href: '#profil', label: 'About' },
+]
+
 const rollLetter = (event) => {
   event.currentTarget.classList.add('is-rolling')
 }
@@ -23,21 +28,31 @@ const resetLetter = (event) => {
   <header class="site-header">
     <a class="wordmark" href="#top" aria-label="Zum Anfang">Elias Ginter</a>
     <nav class="site-nav" aria-label="Hauptnavigation">
-      <a href="#arbeiten" aria-label="Work">
+      <a
+        v-for="item in navItems"
+        :key="item.href"
+        :href="item.href"
+        :aria-label="item.label"
+      >
         <span class="nav-label" aria-hidden="true">
-          <span class="nav-letter" @mouseenter="rollLetter" @animationend="resetLetter"><span data-char="W">W</span></span>
-          <span class="nav-letter" @mouseenter="rollLetter" @animationend="resetLetter"><span data-char="o">o</span></span>
-          <span class="nav-letter" @mouseenter="rollLetter" @animationend="resetLetter"><span data-char="r">r</span></span>
-          <span class="nav-letter" @mouseenter="rollLetter" @animationend="resetLetter"><span data-char="k">k</span></span>
-        </span>
-      </a>
-      <a href="#profil" aria-label="About">
-        <span class="nav-label" aria-hidden="true">
-          <span class="nav-letter" @mouseenter="rollLetter" @animationend="resetLetter"><span data-char="A">A</span></span>
-          <span class="nav-letter" @mouseenter="rollLetter" @animationend="resetLetter"><span data-char="b">b</span></span>
-          <span class="nav-letter" @mouseenter="rollLetter" @animationend="resetLetter"><span data-char="o">o</span></span>
-          <span class="nav-letter" @mouseenter="rollLetter" @animationend="resetLetter"><span data-char="u">u</span></span>
-          <span class="nav-letter" @mouseenter="rollLetter" @animationend="resetLetter"><span data-char="t">t</span></span>
+          <span
+            v-for="(letter, index) in item.label.split('')"
+            :key="`${item.href}-${letter}-${index}`"
+            class="nav-letter"
+            @mouseenter="rollLetter"
+            @animationend="resetLetter"
+          >
+            <span class="nav-letter-track">
+              <span class="nav-face">
+                <span>{{ letter }}</span>
+                <span class="nav-underline"></span>
+              </span>
+              <span class="nav-face">
+                <span>{{ letter }}</span>
+                <span class="nav-underline"></span>
+              </span>
+            </span>
+          </span>
         </span>
       </a>
     </nav>
