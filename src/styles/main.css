@@ -73,25 +73,8 @@ a {
 }
 
 .nav-label {
-  position: relative;
   display: flex;
   line-height: 1;
-}
-
-.nav-label::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -0.18em;
-  height: 1px;
-  background: currentColor;
-  opacity: 0;
-}
-
-.site-nav a:hover .nav-label::after,
-.site-nav a:focus-visible .nav-label::after {
-  opacity: 1;
 }
 
 .nav-letter {
@@ -118,6 +101,8 @@ a {
   text-underline-offset: inherit;
 }
 
+.site-nav a:hover .nav-letter span,
+.site-nav a:focus-visible .nav-letter span,
 .nav-letter.is-rolling span {
   text-decoration-color: currentColor;
 }
