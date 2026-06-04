@@ -9,6 +9,14 @@ const sortedProjects = [...projects].sort((a, b) => {
 
   return yearB - yearA
 })
+
+const rollLetter = (event) => {
+  event.currentTarget.classList.add('is-rolling')
+}
+
+const resetLetter = (event) => {
+  event.currentTarget.classList.remove('is-rolling')
+}
 </script>
 
 <template>
@@ -17,19 +25,19 @@ const sortedProjects = [...projects].sort((a, b) => {
     <nav class="site-nav" aria-label="Hauptnavigation">
       <a href="#arbeiten" aria-label="Work">
         <span class="nav-label" aria-hidden="true">
-          <span class="nav-letter"><span data-char="W">W</span></span>
-          <span class="nav-letter"><span data-char="o">o</span></span>
-          <span class="nav-letter"><span data-char="r">r</span></span>
-          <span class="nav-letter"><span data-char="k">k</span></span>
+          <span class="nav-letter" @mouseenter="rollLetter" @animationend="resetLetter"><span data-char="W">W</span></span>
+          <span class="nav-letter" @mouseenter="rollLetter" @animationend="resetLetter"><span data-char="o">o</span></span>
+          <span class="nav-letter" @mouseenter="rollLetter" @animationend="resetLetter"><span data-char="r">r</span></span>
+          <span class="nav-letter" @mouseenter="rollLetter" @animationend="resetLetter"><span data-char="k">k</span></span>
         </span>
       </a>
       <a href="#profil" aria-label="About">
         <span class="nav-label" aria-hidden="true">
-          <span class="nav-letter"><span data-char="A">A</span></span>
-          <span class="nav-letter"><span data-char="b">b</span></span>
-          <span class="nav-letter"><span data-char="o">o</span></span>
-          <span class="nav-letter"><span data-char="u">u</span></span>
-          <span class="nav-letter"><span data-char="t">t</span></span>
+          <span class="nav-letter" @mouseenter="rollLetter" @animationend="resetLetter"><span data-char="A">A</span></span>
+          <span class="nav-letter" @mouseenter="rollLetter" @animationend="resetLetter"><span data-char="b">b</span></span>
+          <span class="nav-letter" @mouseenter="rollLetter" @animationend="resetLetter"><span data-char="o">o</span></span>
+          <span class="nav-letter" @mouseenter="rollLetter" @animationend="resetLetter"><span data-char="u">u</span></span>
+          <span class="nav-letter" @mouseenter="rollLetter" @animationend="resetLetter"><span data-char="t">t</span></span>
         </span>
       </a>
     </nav>

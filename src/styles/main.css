@@ -89,8 +89,6 @@ a {
   text-decoration-line: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
-  transition: transform 360ms cubic-bezier(0.76, 0, 0.24, 1);
-  transition-delay: calc(var(--letter-index, 0) * 24ms);
 }
 
 .nav-letter span::after {
@@ -104,33 +102,23 @@ a {
 }
 
 .site-nav a:hover .nav-letter span,
-.site-nav a:focus-visible .nav-letter span {
+.site-nav a:focus-visible .nav-letter span,
+.nav-letter.is-rolling span {
   text-decoration-color: currentColor;
 }
 
-.nav-letter:hover span,
-.site-nav a:focus-visible .nav-letter span {
-  transform: translateY(-100%);
+.nav-letter.is-rolling span {
+  animation: nav-letter-roll 420ms cubic-bezier(0.76, 0, 0.24, 1) both;
 }
 
-.nav-letter:nth-child(1) {
-  --letter-index: 0;
-}
+@keyframes nav-letter-roll {
+  0% {
+    transform: translateY(0);
+  }
 
-.nav-letter:nth-child(2) {
-  --letter-index: 1;
-}
-
-.nav-letter:nth-child(3) {
-  --letter-index: 2;
-}
-
-.nav-letter:nth-child(4) {
-  --letter-index: 3;
-}
-
-.nav-letter:nth-child(5) {
-  --letter-index: 4;
+  100% {
+    transform: translateY(-100%);
+  }
 }
 
 .hero {
