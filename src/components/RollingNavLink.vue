@@ -49,6 +49,7 @@ const deactivateWord = () => {
             <span class="nav-face">{{ letter }}</span>
           </span>
         </span>
+        <span class="nav-hover-overline" aria-hidden="true"></span>
         <span class="nav-underline-window">
           <span class="nav-underline-track">
             <span class="nav-underline"></span>
