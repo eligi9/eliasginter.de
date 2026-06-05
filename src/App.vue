@@ -3,23 +3,16 @@ import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import ProjectModule from './components/ProjectModule.vue'
 import P5Canvas from './components/P5Canvas.vue'
 import RollingNavLink from './components/RollingNavLink.vue'
-import projects from './data/projects.json'
-
-const sortedProjects = [...projects].sort((a, b) => {
-  const yearA = Number(a.year) || 0
-  const yearB = Number(b.year) || 0
-
-  return yearB - yearA
-})
+import about from './data/about.json'
+import { useProjectsStore } from './stores/projects'
 
 const navItems = [
   { href: '#/projects', label: 'Work' },
   { href: '#profil', label: 'About' },
 ]
 
+const projectsStore = useProjectsStore()
 const routeHash = ref(window.location.hash || '#top')
-const activeCategory = ref('Alle')
-const activeGalleryIndex = ref(0)
 
 const syncRoute = () => {
   routeHash.value = window.location.hash || '#top'
@@ -32,67 +25,14 @@ const projectRouteId = computed(() => {
 })
 
 const isProjectIndex = computed(() => routeHash.value === '#/projects')
-const selectedProject = computed(() => sortedProjects.find((project) => project.id === projectRouteId.value))
-const allCategories = computed(() => {
-  const categories = new Set()
-
-  sortedProjects.forEach((project) => {
-    project.tags?.forEach((tag) => categories.add(tag))
-  })
-
-  return ['Alle', ...Array.from(categories).sort((a, b) => a.localeCompare(b))]
-})
-
-const filteredProjects = computed(() => {
-  if (activeCategory.value === 'Alle') {
-    return sortedProjects
-  }
-
-  return sortedProjects.filter((project) => project.tags?.includes(activeCategory.value))
-})
-
-const selectedGallery = computed(() => {
-  const project = selectedProject.value
-
-  if (!project) {
-    return []
-  }
-
-  if (Array.isArray(project.gallery) && project.gallery.length > 0) {
-    return project.gallery
-  }
-
-  const fallbackImage = project.media?.src || project.media?.poster
-
-  return fallbackImage
-    ? [{ src: fallbackImage, alt: project.media?.alt || project.title }]
-    : []
-})
-
-const activeGalleryItem = computed(() => selectedGallery.value[activeGalleryIndex.value])
-
-const setCategory = (category) => {
-  activeCategory.value = category
-}
-
-const showPreviousImage = () => {
-  if (selectedGallery.value.length <= 1) return
-
-  activeGalleryIndex.value =
-    (activeGalleryIndex.value - 1 + selectedGallery.value.length) % selectedGallery.value.length
-}
-
-const showNextImage = () => {
-  if (selectedGallery.value.length <= 1) return
-
-  activeGalleryIndex.value = (activeGalleryIndex.value + 1) % selectedGallery.value.length
-}
-
+const selectedProject = computed(() => projectsStore.getProjectById(projectRouteId.value))
+const selectedGallery = computed(() => projectsStore.getProjectGallery(selectedProject.value))
+const activeGalleryItem = computed(() => selectedGallery.value[projectsStore.activeGalleryIndex])
 const formatList = (items = []) => items.join(', ')
 const abstractParagraphs = computed(() => selectedProject.value?.abstract?.split('\n\n') || [])
 
 watch(projectRouteId, () => {
-  activeGalleryIndex.value = 0
+  projectsStore.resetGallery()
 })
 
 onMounted(() => {
@@ -152,16 +92,16 @@ onBeforeUnmount(() => {
             type="button"
             :disabled="selectedGallery.length <= 1"
             aria-label="Vorheriges Galeriebild"
-            @click="showPreviousImage"
+            @click="projectsStore.showPreviousImage(selectedGallery.length)"
           >
             ←
           </button>
-          <p>{{ activeGalleryIndex + 1 }} / {{ Math.max(selectedGallery.length, 1) }}</p>
+          <p>{{ projectsStore.activeGalleryIndex + 1 }} / {{ Math.max(selectedGallery.length, 1) }}</p>
           <button
             type="button"
             :disabled="selectedGallery.length <= 1"
             aria-label="Naechstes Galeriebild"
-            @click="showNextImage"
+            @click="projectsStore.showNextImage(selectedGallery.length)"
           >
             →
           </button>
@@ -213,21 +153,27 @@ onBeforeUnmount(() => {
       </div>
 
       <div class="project-filters" aria-label="Projekte filtern">
-        <button
-          v-for="category in allCategories"
-          :key="category"
-          type="button"
-          :class="{ 'is-active': activeCategory === category }"
-          @click="setCategory(category)"
+        <div
+          v-for="group in projectsStore.categoryFilters"
+          :key="group.id"
+          class="project-filter-group"
         >
-          {{ category }}
-        </button>
+          <button
+            v-for="category in group.items"
+            :key="category.label"
+            type="button"
+            :class="{ 'is-active': projectsStore.activeCategory === category.label }"
+            @click="projectsStore.setCategory(category.label)"
+          >
+            {{ category.label }}
+          </button>
+        </div>
       </div>
     </section>
 
     <section class="project-stack project-stack-filtered" aria-label="Gefilterte Arbeiten">
       <ProjectModule
-        v-for="project in filteredProjects"
+        v-for="project in projectsStore.filteredProjects"
         :key="project.title"
         :project="project"
       />
@@ -250,7 +196,7 @@ onBeforeUnmount(() => {
 
     <section id="arbeiten" class="project-stack" aria-label="Ausgewaehlte Arbeiten">
       <ProjectModule
-        v-for="project in sortedProjects"
+        v-for="project in projectsStore.sortedProjects"
         :key="project.title"
         :project="project"
       />
@@ -258,17 +204,15 @@ onBeforeUnmount(() => {
 
     <section id="profil" class="profile-section" aria-labelledby="profile-title">
       <div>
-        <p class="section-kicker">Profil</p>
-        <h2 id="profile-title">Student der interaktiven Medien zwischen Informatik und Design.</h2>
+        <p class="section-kicker">{{ about.kicker }}</p>
+        <h2 id="profile-title">{{ about.title }}</h2>
       </div>
       <figure class="profile-portrait">
         <img src="/media/elias-ginter-cutout.png" alt="Portrait von Elias Ginter" />
       </figure>
-      <p>
-        Elias Ginter entwickelt Konzepte, Webinterfaces, audiovisuelle Arbeiten und
-        interaktive Prototypen. Das Portfolio ist modular aufgebaut: Jede Arbeit kann als
-        grosses Bild, Video, p5-Sketch oder Webapp eingebunden werden.
-      </p>
+      <div class="profile-copy">
+        <p v-for="paragraph in about.paragraphs" :key="paragraph">{{ paragraph }}</p>
+      </div>
     </section>
   </main>
 
