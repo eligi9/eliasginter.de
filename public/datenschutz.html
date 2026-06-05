@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Datenschutzerklaerung | Elias Ginter</title>
+    <style>
+      :root {
+        color: #f4f1e8;
+        background: #0d0f11;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-width: 320px;
+        background: #0d0f11;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .legal-page {
+        width: min(980px, calc(100% - 36px));
+        margin: 0 auto;
+        padding: clamp(72px, 11vw, 130px) 0;
+      }
+
+      .back-link,
+      .legal-meta,
+      h2,
+      h3 {
+        color: #6fcabd;
+        font-size: 0.78rem;
+        font-weight: 760;
+        text-transform: uppercase;
+      }
+
+      .back-link {
+        display: inline-block;
+        margin-bottom: clamp(44px, 8vw, 90px);
+        text-decoration: none;
+      }
+
+      .back-link:hover,
+      .back-link:focus-visible,
+      .legal-index a:hover,
+      .legal-index a:focus-visible,
+      .seal a:hover,
+      .seal a:focus-visible {
+        color: #f06d4f;
+      }
+
+      h1 {
+        max-width: 820px;
+        margin: 0;
+        color: #f4f1e8;
+        font-size: clamp(2.4rem, 7vw, 5.8rem);
+        line-height: 0.9;
+        letter-spacing: 0;
+      }
+
+      section,
+      .legal-index {
+        margin-top: clamp(42px, 7vw, 78px);
+      }
+
+      h2 {
+        margin: 0 0 14px;
+      }
+
+      h3 {
+        margin: 28px 0 12px;
+        color: #f06d4f;
+      }
+
+      p,
+      li {
+        max-width: 78ch;
+        color: #b9b5aa;
+        font-size: 1rem;
+        line-height: 1.65;
+      }
+
+      p {
+        margin: 0 0 16px;
+      }
+
+      ul {
+        padding-left: 1.1rem;
+        margin: 0 0 16px;
+      }
+
+      strong {
+        color: #f4f1e8;
+        font-weight: 760;
+      }
+
+      .legal-index ul {
+        display: grid;
+        gap: 8px;
+        padding: 0;
+        list-style: none;
+      }
+
+      .legal-index a,
+      .seal a {
+        color: #b9b5aa;
+        text-decoration: none;
+        transition: color 180ms ease;
+      }
+
+      .seal {
+        margin-top: clamp(42px, 7vw, 78px);
+      }
+
+      .is-loading,
+      .is-error {
+        color: #b9b5aa;
+      }
+
+      .is-error {
+        color: #f06d4f;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="legal-page">
+      <a class="back-link" href="/">Zurueck zum Portfolio</a>
+      <p class="legal-meta" id="legal-meta">Datenschutz</p>
+      <h1 id="legal-title">Datenschutzerklaerung</h1>
+      <p class="is-loading" id="legal-status">Datenschutzerklaerung wird geladen.</p>
+      <nav class="legal-index" id="legal-index" aria-label="Inhaltsverzeichnis"></nav>
+      <div id="legal-sections"></div>
+      <noscript>
+        <p class="is-error">
+          Bitte aktivieren Sie JavaScript, um die Datenschutzerklaerung anzuzeigen.
+        </p>
+      </noscript>
+    </main>
+
+    <script>
+      const statusNode = document.querySelector('#legal-status')
+      const titleNode = document.querySelector('#legal-title')
+      const metaNode = document.querySelector('#legal-meta')
+      const indexNode = document.querySelector('#legal-index')
+      const sectionsNode = document.querySelector('#legal-sections')
+
+      const renderPolicy = (policy) => {
+        document.title = `${policy.title} | Elias Ginter`
+        titleNode.textContent = policy.title
+        metaNode.textContent = policy.updatedAt ? `Stand: ${policy.updatedAt}` : 'Datenschutz'
+        statusNode.remove()
+
+        indexNode.innerHTML = `
+          <h2>Inhaltsverzeichnis</h2>
+          <ul>
+            ${policy.tableOfContents
+              .map((item) => `<li><a href="#${item.id}">${item.title}</a></li>`)
+              .join('')}
+          </ul>
+        `
+
+        sectionsNode.innerHTML = policy.sections
+          .map(
+            (section) => `
+              <section id="${section.id}" aria-labelledby="${section.id}-title">
+                <h2 id="${section.id}-title">${section.title}</h2>
+                ${section.html}
+              </section>
+            `,
+          )
+          .join('')
+
+        if (policy.source?.url && policy.source?.label) {
+          sectionsNode.insertAdjacentHTML(
+            'beforeend',
+            `<p class="seal"><a href="${policy.source.url}" target="_blank" rel="noopener noreferrer nofollow">${policy.source.label}</a></p>`,
+          )
+        }
+      }
+
+      fetch('/data/privacy-policy.json')
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error('Datenschutzdaten konnten nicht geladen werden.')
+          }
+
+          return response.json()
+        })
+        .then(renderPolicy)
+        .catch(() => {
+          statusNode.className = 'is-error'
+          statusNode.textContent = 'Die Datenschutzerklaerung konnte nicht geladen werden.'
+        })
+    </script>
+  </body>
+</html>
