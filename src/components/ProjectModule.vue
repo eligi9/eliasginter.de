@@ -98,6 +98,7 @@ const pauseVideo = () => {
       <ul aria-label="Schlagworte">
         <li v-for="item in project.tags" :key="item">{{ item }}</li>
       </ul>
+      <a class="project-detail-link" :href="`#/projects/${project.id}`">Details</a>
     </div>
   </article>
 </template>

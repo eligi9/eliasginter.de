@@ -1,0 +1,20 @@
+{
+  "title": "Impressum",
+  "meta": "Angaben gemaess § 5 DDG",
+  "provider": {
+    "title": "Diensteanbieter",
+    "name": "Elias Ginter",
+    "street": "Maximilianstraße 63",
+    "postalCode": "86150",
+    "city": "Augsburg",
+    "country": "Deutschland"
+  },
+  "contact": {
+    "title": "Kontaktmoeglichkeiten",
+    "email": "eligi9@gmx.de"
+  },
+  "source": {
+    "label": "Datenschutz-Generator.de von Dr. Thomas Schwenke",
+    "url": "https://datenschutz-generator.de/"
+  }
+}

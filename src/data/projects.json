@@ -307,5 +307,43 @@
       "caseStudy": null
     },
     "featured": true
+  },
+  {
+    "id": "amor-fati-bureaucracy-chaos",
+    "title": "Amor Fati // Bureaucracy & Chaos",
+    "kicker": "Abstract Concepts",
+    "type": "video",
+    "year": "2024",
+    "status": "Completed",
+    "description": "Sounddesign fuer das Filmprojekt von Tom Henkel in Zusammenarbeit mit Studierenden der Elisava.",
+    "summary": "Sounddesign fuer ein Filmprojekt ueber Spannung, Kontrolle und Unordnung.",
+    "abstract": "Amor Fati // Bureaucracy & Chaos ist ein Filmprojekt von Tom Henkel in Zusammenarbeit mit Studierenden der Elisava. Der Beitrag zu diesem Projekt lag im Sounddesign: Klang, Atmosphaere und akustische Struktur begleiten die visuelle Erzaehlung zwischen Ordnung, Buerokratie und Chaos.",
+    "role": ["Sound Design"],
+    "tools": ["Sound Design", "Audio Editing", "Mixing"],
+    "tags": ["Sounddesign", "Audio", "Bureaucracy", "Chaos"],
+    "themes": ["Ordnung", "Chaos", "Kontrolle", "Atmosphaere", "Klang"],
+    "collaboration": {
+      "with": ["Tom Henkel", "Studierende der Elisava"],
+      "context": "Filmprojekt"
+    },
+    "media": {
+      "kind": "video",
+      "src": null,
+      "poster": "/media/amor-fati-bureaucracy-chaos-thumbnail.jpg",
+      "alt": "Amor Fati // Bureaucracy & Chaos als audiovisuelles Projekt mit Sounddesign von Elias Ginter"
+    },
+    "videoEmbed": {
+      "provider": "youtube",
+      "url": "https://www.youtube.com/watch?v=ZnVtpeqT7X8",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/ZnVtpeqT7X8?enablejsapi=1&controls=0&rel=0&modestbranding=1&playsinline=1&loop=1&playlist=ZnVtpeqT7X8&disablekb=1&fs=0&iv_load_policy=3",
+      "background": true,
+      "controls": false
+    },
+    "links": {
+      "live": null,
+      "repository": null,
+      "caseStudy": null
+    },
+    "featured": true
   }
 ]
