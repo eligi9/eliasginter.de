@@ -6,13 +6,13 @@
     "type": "video",
     "year": "2024",
     "status": "Completed",
-    "description": "Ein abstraktes Filmkonzept ueber Zerrissenheit, Autonomie und die Bewegung zwischen einer farbenfrohen Innenwelt und einer kalten, kargen Realitaet.",
-    "summary": "Eine Taenzerin bewegt sich zwischen zwei Sphaeren: harmonische Farbigkeit trifft auf Beton, Tiefgarage und kalte Wirklichkeit.",
+    "description": "Ein abstraktes Filmkonzept über Zerrissenheit, Autonomie und die Bewegung zwischen einer farbenfrohen Innenwelt und einer kalten, kargen Realität.",
+    "summary": "Eine Tänzerin bewegt sich zwischen zwei Sphären: harmonische Farbigkeit trifft auf Beton, Tiefgarage und kalte Wirklichkeit.",
     "abstract": "Der Riss markiert die Grenze zwischen zwei Realit\u00e4ten: einer d\u00fcsteren, kalten Welt, geerdet in Fakten und einer farbenfrohen, leichtf\u00fc\u00dfigen Welt. Das Filmprojekt \"Riss\" erkundet die Kraft der Emotionen und die Bewegung zwischen diesen unterschiedlichen Sph\u00e4ren. Es beleuchtet den inneren Kampf um Autonomie - die Selbstbestimmung der eigenen Realit\u00e4t.\n\n\"Riss\" ist ein Filmprojekt in Kooperation mit der T\u00e4nzerin Christine Kuckuck, das im Rahmen von \"Dance, Draw & Dance\", eines fach\u00fcbergreifenden Semesterkonzepts, entstanden ist.\n\nDas Ergebnis war ein Videoprojekt, bei dem wir eine Verbindung zwischen der reinen Tanzkunst, der filmischen Aufzeichnung und der Erweiterung und Verst\u00e4rkung der vom T\u00e4nzer ausgedr\u00fcckten Emotionen suchten.",
     "role": ["Concept", "Film", "Editing", "Visual Direction"],
     "tools": ["Camera", "Video Editing", "Concept Development"],
     "tags": ["Abstract Concept", "Film", "Dance", "Emotion", "Contrast"],
-    "themes": ["Zerrissenheit", "Autonomie", "Realitaet", "Innenwelt", "Koerper"],
+    "themes": ["Zerrissenheit", "Autonomie", "Realität", "Innenwelt", "Körper"],
     "collaboration": {
       "with": ["Christine Kuckuck"],
       "context": "Dance, Draw & Dance"
@@ -20,8 +20,8 @@
     "media": {
       "kind": "video",
       "src": null,
-      "poster": "/media/riss-thumbnail.jpg",
-      "alt": "Filmprojekt Riss ueber eine Taenzerin zwischen farbenfroher Innenwelt und kalter Realitaet"
+      "poster": "/media/riss-thumbnail-color.jpg",
+      "alt": "Filmprojekt Riss über eine Tänzerin zwischen farbenfroher Innenwelt und kalter Realität"
     },
     "videoEmbed": {
       "provider": "youtube",
@@ -44,9 +44,9 @@
     "type": "video",
     "year": "2023",
     "status": "Completed",
-    "description": "Eine abstrakte Animation, in der einfache geometrische Formen zur Soundspur den Lebenszyklus eines Kreises erzaehlen.",
-    "summary": "Ein audiovisuelles System ueber Entstehung, Bewegung, Veraenderung und Aufloesung einer geometrischen Figur.",
-    "abstract": "LifeCyrcle reduziert Leben auf eine elementare Form: den Kreis. Basierend auf einer Soundspur entsteht eine abstrakte Animation, die ohne figuerliche Darstellung auskommt und nur mit einfachen geometrischen Objekten arbeitet.\n\nDer Kreis wird dabei nicht als statisches Zeichen verstanden, sondern als Figur mit eigener Entwicklung. Rhythmus, Skalierung, Wiederholung und Transformation bilden eine visuelle Erzaehlung ueber Werden, Veraenderung und Vergehen. Das Projekt uebersetzt Klang in Bewegung und macht aus einer reduzierten Form ein abstraktes Konzept von Lebenszeit.",
+    "description": "Eine abstrakte Animation, in der einfache geometrische Formen zur Soundspur den Lebenszyklus eines Kreises erzählen.",
+    "summary": "Ein audiovisuelles System über Entstehung, Bewegung, Veränderung und Auflösung einer geometrischen Figur.",
+    "abstract": "LifeCyrcle reduziert Leben auf eine elementare Form: den Kreis. Basierend auf einer Soundspur entsteht eine abstrakte Animation, die ohne figürliche Darstellung auskommt und nur mit einfachen geometrischen Objekten arbeitet.\n\nDer Kreis wird dabei nicht als statisches Zeichen verstanden, sondern als Figur mit eigener Entwicklung. Rhythmus, Skalierung, Wiederholung und Transformation bilden eine visuelle Erzählung über Werden, Veränderung und Vergehen. Das Projekt übersetzt Klang in Bewegung und macht aus einer reduzierten Form ein abstraktes Konzept von Lebenszeit.",
     "role": ["Concept", "Animation", "Motion Design"],
     "tools": ["Animation", "Sound-based Motion", "Geometric Design"],
     "tags": ["Abstract Concept", "Animation", "Motion", "Sound", "Geometry"],
@@ -55,7 +55,7 @@
       "kind": "video",
       "src": null,
       "poster": "/media/lifecyrcle-thumbnail.jpg",
-      "alt": "LifeCyrcle als abstrakte Animation ueber das Leben eines Kreises"
+      "alt": "LifeCyrcle als abstrakte Animation über das Leben eines Kreises"
     },
     "videoEmbed": {
       "provider": "youtube",
@@ -78,16 +78,16 @@
     "type": "webapp",
     "year": "2023",
     "status": "Prototype",
-    "description": "Eine mobile Webapplikation, mit der Musik-Einsteiger intuitiv eigene Jam-Tracks per Drag and Drop erstellen koennen.",
-    "summary": "EasyJam macht musikalisches Ueben spielerischer: Tonart, Tempo und Songstruktur werden ueber einfache Touch-Interaktionen zu einem eigenen Backing Track kombiniert.",
-    "abstract": "EasyJam ist eine Webapplikation fuer den Einstieg ins gemeinsame Musizieren. Gerade am Anfang braucht Musiklernen Geduld, Zeit und Uebung; gleichzeitig fehlt vielen Anfaengern das Netzwerk, um direkt mit anderen zu spielen. Allein zu ueben funktioniert, wird aber schnell monoton.\n\nDie Anwendung bietet deshalb eine einfache Moeglichkeit, eigene Jam-Tracks auf einem Touchdevice zu bauen. Per Spracheingabe kann die Tonart erkannt werden, das Tempo wird ueber Tap-in-BPM gesetzt und musikalische Bausteine lassen sich per Drag and Drop zu einer Komposition arrangieren. So entsteht ein spielerischer Zugang zu Tonarten, Harmonien, Timing und Songstruktur.",
+    "description": "Eine mobile Webapplikation, mit der Musik-Einsteiger intuitiv eigene Jam-Tracks per Drag and Drop erstellen können.",
+    "summary": "EasyJam macht musikalisches Üben spielerischer: Tonart, Tempo und Songstruktur werden über einfache Touch-Interaktionen zu einem eigenen Backing Track kombiniert.",
+    "abstract": "EasyJam ist eine Webapplikation für den Einstieg ins gemeinsame Musizieren. Gerade am Anfang braucht Musiklernen Geduld, Zeit und Übung; gleichzeitig fehlt vielen Anfängern das Netzwerk, um direkt mit anderen zu spielen. Allein zu üben funktioniert, wird aber schnell monoton.\n\nDie Anwendung bietet deshalb eine einfache Möglichkeit, eigene Jam-Tracks auf einem Touchdevice zu bauen. Per Spracheingabe kann die Tonart erkannt werden, das Tempo wird über Tap-in-BPM gesetzt und musikalische Bausteine lassen sich per Drag and Drop zu einer Komposition arrangieren. So entsteht ein spielerischer Zugang zu Tonarten, Harmonien, Timing und Songstruktur.",
     "role": ["Concept", "Interaction Design", "Frontend Development", "Sound Interaction"],
     "tools": ["Web App", "Touch Interaction", "Voice Input", "Drag and Drop", "BPM Detection"],
     "tags": ["Digital Design", "Interactive Experience", "Webapp", "Music", "Touch Interface"],
-    "themes": ["Musiklernen", "Jam Tracks", "Tempo", "Harmonie", "Spielerisches Ueben"],
+    "themes": ["Musiklernen", "Jam Tracks", "Tempo", "Harmonie", "Spielerisches Üben"],
     "interaction": {
       "input": "Spracheingabe zur Tonarterkennung, Tap-in-BPM und Drag-and-Drop auf Touchdevices",
-      "output": "Ein intuitiv arrangierter Backing Track zum Ueben und Jammen"
+      "output": "Ein intuitiv arrangierter Backing Track zum Üben und Jammen"
     },
     "media": {
       "kind": "video",
@@ -110,15 +110,115 @@
     "featured": true
   },
   {
+    "id": "lonis-weltraumreise-landingpage",
+    "title": "Landingpage Lonis Weltraumreise",
+    "kicker": "Digital Design / Landingpage",
+    "type": "webapp",
+    "year": "2026",
+    "status": "Completed",
+    "description": "Eine Landingpage für Lonis Weltraumreise, die das Projekt visuell einführt und den Zugang zur digitalen Experience klar, freundlich und niedrigschwellig eröffnet.",
+    "summary": "Eine Landingpage für die narrative Webexperience Lonis Weltraumreise mit Fokus auf Einstieg, Orientierung und visueller Vermittlung.",
+    "abstract": "Die Landingpage für Lonis Weltraumreise schafft einen klaren Einstieg in die digitale Experience. Im Vordergrund stehen Orientierung, visuelle Vermittlung und ein schneller Zugang zur Geschichte: Eltern und Kinder sollen unmittelbar verstehen, worum es im Projekt geht und wie sie in die interaktive Erzählung einsteigen können.\n\nGestalterisch greift die Landingpage die freundliche, raumfahrtbezogene Bildsprache von Lonis Weltraumreise auf und übersetzt sie in eine fokussierte Webpräsenz. Sie verbindet Information, Einladung und digitale Anwendung zu einem zugänglichen Einstiegspunkt.",
+    "role": ["Digital Design", "Web Design", "Frontend Development"],
+    "tools": ["Web Design", "Frontend Development", "Landingpage"],
+    "tags": ["Digital Design", "Landingpage", "Webapp", "Storytelling", "Healthcare"],
+    "themes": ["Einstieg", "Orientierung", "Kindgerechte Kommunikation", "Storytelling", "Webpräsenz"],
+    "collaboration": {
+      "with": ["Tigerherz - Wenn Eltern Krebs haben", "Tumorzentrum Freiburg-CCCF"],
+      "context": "Landingpage für Kooperationsprojekt"
+    },
+    "media": {
+      "kind": "image",
+      "src": "/media/lonis-weltraumreise-landingpage.png",
+      "poster": null,
+      "alt": "Landingpage Lonis Weltraumreise mit Logo und illustriertem Charakter"
+    },
+    "gallery": [
+      {
+        "src": "/media/lonis-weltraumreise-landingpage.png",
+        "alt": "Landingpage Lonis Weltraumreise mit Logo und illustriertem Charakter"
+      }
+    ],
+    "videoEmbed": null,
+    "links": {
+      "live": "https://lonis-weltraumreise.de",
+      "repository": null,
+      "caseStudy": null
+    },
+    "featured": true
+  },
+  {
+    "id": "sono-bricolage",
+    "title": "sono bricolage",
+    "kicker": "Abstract Concepts / Sounddesign",
+    "type": "installation",
+    "year": "2025",
+    "status": "Completed",
+    "description": "Eine raumgreifende Klanginstallation, in der analoge Klangsynthese, selbst gebaute Resonanzkörper und Live-Projektion zu einem physischen audiovisuellen System verbunden werden.",
+    "summary": "Analoge Synthesizer, große Blechplatten und eine Wand aus klingenden Blechwannen formen eine Installation, in der Klang als Material hörbar, spürbar und sichtbar wird.",
+    "abstract": "sono bricolage untersucht Klang als physisches und gestalterisches Material. Die Klänge wurden mit analogen Synthesizern erzeugt und über Filter, Hüllkurven und LFOs geformt. Dadurch entstand kein fertiger Soundtrack, sondern ein modulierbares Klangsystem, dessen Bewegungen direkt in Resonanz, Vibration und Projektion übersetzt wurden.\n\nAusgangspunkt war ein selbst gebauter Plattenhall aus einer Stahlkonstruktion und zwei Blechplatten mit jeweils etwa 2 x 1,5 Metern Fläche. Sound wurde auf die Platten gespielt, durch ihre Resonanz verändert und anschließend wieder abgenommen. Ergänzend entstand eine Wand aus Blechwannen in unterschiedlichen Größen, die über Körperschallwandler als Lautsprecher genutzt wurden. So wurde das Material selbst zum Klangkörper: Jede Fläche reagierte anders, färbte den Sound und machte akustische Energie räumlich erfahrbar.\n\nDie Vibrationen der Platten wurden nicht nur hörbar, sondern auch sichtbar gemacht: Wasser in Reagenzgläsern geriet durch die Schwingungen in Bewegung. Diese Wasserbilder wurden live über Tageslichtprojektoren an die Wand geworfen und übersetzten den Klang in eine fragile, analoge Visualisierung aus Kreisen, Wellen und Licht.\n\nDas Projekt verbindet Sounddesign, analoge Klangsynthese, Materialexperiment und Live-Projektion zu einer Installation, in der akustische Resonanz, mechanische Vibration und visuelle Wahrnehmung unmittelbar ineinandergreifen.",
+    "role": ["Sounddesign", "Analog Sound Synthesis", "Concept", "Physical Prototyping", "Installation"],
+    "tools": ["Analog Synthesizers", "Filters", "Envelopes", "LFOs", "Plate Reverb", "Steel Construction", "Sheet Metal", "Tactile Transducers", "Metal Trays", "Contact Microphones", "Overhead Projectors"],
+    "tags": ["Abstract Concepts", "Sounddesign", "Analog Sound Synthesis", "Installation", "Physical Interface", "Live Projection"],
+    "themes": ["Resonanz", "Vibration", "Analoge Klangsynthese", "Klangkörper", "Wasser", "Analoge Visualisierung"],
+    "interaction": {
+      "input": "Analoge Synthesizer erzeugten modulierte Klangsignale, die auf große Blechplatten und Blechwannen übertragen wurden.",
+      "output": "Die Resonanzkörper färbten den Sound und setzten Wasser in Reagenzgläsern in Bewegung, das live über Tageslichtprojektoren an die Wand projiziert wurde."
+    },
+    "media": {
+      "kind": "image",
+      "src": "/media/sono-bricolage.jpg",
+      "poster": null,
+      "alt": "sono bricolage Installation mit projizierten Wasserresonanzen, analogen Synthesizern, Blechplatten und Blechwannen"
+    },
+    "gallery": [
+      {
+        "src": "/media/sono-bricolage.jpg",
+        "alt": "sono bricolage Installation mit projizierten Wasserresonanzen, analogen Synthesizern, Blechplatten und Blechwannen"
+      },
+      {
+        "src": "/media/sono-bricolage/plate-reverb-detail.jpg",
+        "alt": "Detail des selbst gebauten Plattenhalls mit Blechplatte, Stahlkonstruktion und analogem Synthesizer-Setup"
+      },
+      {
+        "src": "/media/sono-bricolage/metal-tray-speakers.jpg",
+        "alt": "Wand aus Blechwannen in verschiedenen Größen, die als Lautsprecher über Körperschallwandler genutzt wurden"
+      },
+      {
+        "src": "/media/sono-bricolage/water-projection-silhouette.jpg",
+        "alt": "Silhouette vor einer Projektion kreisförmiger Wasserresonanzen im dunklen Raum"
+      },
+      {
+        "src": "/media/sono-bricolage/overhead-projector-detail.jpg",
+        "alt": "Tageslichtprojektor mit Live-Projektion kreisförmiger Wasserresonanzen"
+      },
+      {
+        "src": "/media/sono-bricolage/water-resonance-projection.jpg",
+        "alt": "Projizierte Wasserresonanz mit analogen Synthesizern und Plattenhall-Aufbau im Vordergrund"
+      },
+      {
+        "src": "/media/sono-bricolage/analog-synth-setup.jpg",
+        "alt": "Analoger Synthesizer-Aufbau mit Plattenhall, Mikrofonen und Tageslichtprojektor im Installationsraum"
+      }
+    ],
+    "videoEmbed": null,
+    "links": {
+      "live": null,
+      "repository": null,
+      "caseStudy": null
+    },
+    "featured": true
+  },
+  {
     "id": "lonis-weltraumreise",
     "title": "Lonis Weltraumreise",
     "kicker": "Digital Design / Interactive Experience",
     "type": "webapp",
     "year": "2025",
     "status": "Completed",
-    "description": "Eine interaktive Webapplikation, die Eltern und Kindern hilft, eine Krebserkrankung und moegliche Therapieformen kindgerecht ueber eine Geschichte zu entdecken.",
-    "summary": "Eine digitale, narrative Experience ueber Kommunikation, Fuersorge und kindgerechte Vermittlung in einer belastenden Lebenssituation.",
-    "abstract": "Lonis Weltraumreise ist eine Webapplikation, die in Kooperation mit der Organisation \"Tigerherz - Wenn Eltern Krebs haben\", einem Angebot des Tumorzentrums Freiburg-CCCF, entstanden ist.\n\nIm Vordergrund steht die Frage, auf welche Art man eine Krebserkrankung mit den eigenen Kindern kommuniziert. Lonis Weltraumreise ist eine interaktive Geschichte, die es Eltern zusammen mit ihren Kindern erlaubt, ihre Erkrankung sowie moegliche Therapieformen zu entdecken.\n\nDie Kommunikation erfolgt dadurch nicht auf einem rein verbalen Weg, sondern auf kindgerechte Weise, verpackt in eine Geschichte.",
+    "description": "Eine interaktive Webapplikation, die Eltern und Kindern hilft, eine Krebserkrankung und mögliche Therapieformen kindgerecht über eine Geschichte zu entdecken.",
+    "summary": "Eine digitale, narrative Experience über Kommunikation, Fürsorge und kindgerechte Vermittlung in einer belastenden Lebenssituation.",
+    "abstract": "Lonis Weltraumreise ist eine Webapplikation, die in Kooperation mit der Organisation \"Tigerherz - Wenn Eltern Krebs haben\", einem Angebot des Tumorzentrums Freiburg-CCCF, entstanden ist.\n\nIm Vordergrund steht die Frage, auf welche Art man eine Krebserkrankung mit den eigenen Kindern kommuniziert. Lonis Weltraumreise ist eine interaktive Geschichte, die es Eltern zusammen mit ihren Kindern erlaubt, ihre Erkrankung sowie mögliche Therapieformen zu entdecken.\n\nDie Kommunikation erfolgt dadurch nicht auf einem rein verbalen Weg, sondern auf kindgerechte Weise, verpackt in eine Geschichte.",
     "role": ["Digital Design", "Interaction Design", "Concept", "Frontend Development"],
     "tools": ["Web Design", "Frontend Development", "Storytelling"],
     "tags": ["Digital Design", "Interactive Experience", "Webapp", "Storytelling", "Healthcare"],
@@ -131,7 +231,7 @@
       "kind": "video",
       "src": null,
       "poster": "/media/lonis-weltraumreise-thumbnail.jpg",
-      "alt": "Lonis Weltraumreise als interaktive Webapplikation fuer Eltern und Kinder"
+      "alt": "Lonis Weltraumreise als interaktive Webapplikation für Eltern und Kinder"
     },
     "videoEmbed": {
       "provider": "vimeo",
@@ -154,20 +254,20 @@
     "type": "webapp",
     "year": "2023",
     "status": "Prototype",
-    "description": "Ein soziales Foto-Game, das taegliche Themen nicht dokumentarisch, sondern durch persoenliche Bildinterpretationen beantwortet.",
-    "summary": "The Picture Game verwandelt die Smartphonekamera in ein spielerisches Kommunikationswerkzeug: Jeden Tag entsteht aus einem Begriff eine Sammlung subjektiver Sichtweisen. Das Projekt verbindet Foto-Challenge, Voting und Themenwahl zu einem sozialen Kreislauf, in dem Nutzer nicht nur Bilder hochladen, sondern den naechsten Spieltag mitbestimmen.",
-    "abstract": "The Picture Game ist eine agile Webanwendung, die ein soziales Foto-Spiel fuer den Alltag entwirft. Im Zentrum steht nicht das moeglichst realistische Festhalten eines Moments, sondern die Frage, wie unterschiedlich Menschen denselben Themenbegriff visuell interpretieren.\n\nEin Spieltag besteht aus drei Phasen. In der Einsendungsphase wird ein aktuelles Thema veroeffentlicht und Nutzer koennen einmal pro Tag ein Foto mit ihrer Smartphonekamera hochladen. In der Bewertungsphase werden die Beitraege der anderen sichtbar und die Community stimmt fuer ihr Lieblingsbild ab. In der Siegerphase wird der Gewinner informiert und darf aus vorgeschlagenen Begriffen ein neues Thema fuer den naechsten Durchlauf auswaehlen.\n\nDadurch entsteht ein kleiner sozialer Rhythmus aus Aufgabe, Interpretation, Vergleich und Mitgestaltung. Das Projekt verbindet Interaction Design, Webentwicklung und Game Mechanics zu einer Anwendung, die Fotografie weniger als Abbild und mehr als persoenliche Antwort versteht. Entwickelt wurde The Picture Game im Modul \"Agile Webanwendung mit Python\" als Teamarbeit mit Bastian Roegele und Elias Ginter. Das Backend wurde mit Django umgesetzt.",
+    "description": "Ein soziales Foto-Game, das tägliche Themen nicht dokumentarisch, sondern durch persönliche Bildinterpretationen beantwortet.",
+    "summary": "The Picture Game verwandelt die Smartphonekamera in ein spielerisches Kommunikationswerkzeug: Jeden Tag entsteht aus einem Begriff eine Sammlung subjektiver Sichtweisen. Das Projekt verbindet Foto-Challenge, Voting und Themenwahl zu einem sozialen Kreislauf, in dem Nutzer nicht nur Bilder hochladen, sondern den nächsten Spieltag mitbestimmen.",
+    "abstract": "The Picture Game ist eine agile Webanwendung, die ein soziales Foto-Spiel für den Alltag entwirft. Im Zentrum steht nicht das möglichst realistische Festhalten eines Moments, sondern die Frage, wie unterschiedlich Menschen denselben Themenbegriff visuell interpretieren.\n\nEin Spieltag besteht aus drei Phasen. In der Einsendungsphase wird ein aktuelles Thema veröffentlicht und Nutzer können einmal pro Tag ein Foto mit ihrer Smartphonekamera hochladen. In der Bewertungsphase werden die Beiträge der anderen sichtbar und die Community stimmt für ihr Lieblingsbild ab. In der Siegerphase wird der Gewinner informiert und darf aus vorgeschlagenen Begriffen ein neues Thema für den nächsten Durchlauf auswählen.\n\nDadurch entsteht ein kleiner sozialer Rhythmus aus Aufgabe, Interpretation, Vergleich und Mitgestaltung. Das Projekt verbindet Interaction Design, Webentwicklung und Game Mechanics zu einer Anwendung, die Fotografie weniger als Abbild und mehr als persönliche Antwort versteht. Entwickelt wurde The Picture Game im Modul \"Agile Webanwendung mit Python\" als Teamarbeit mit Bastian Rögele und Elias Ginter. Das Backend wurde mit Django umgesetzt.",
     "role": ["Concept", "Interaction Design", "Frontend Development", "Backend Development"],
     "tools": ["Django", "Python", "PyCharm", "Web App", "Agile Development"],
     "tags": ["Digital Design", "Interactive Experience", "Webapp", "Social Game", "Photography"],
-    "themes": ["Fotografische Interpretation", "Community Voting", "Taegliche Challenge", "Spielmechanik", "Themenwahl"],
+    "themes": ["Fotografische Interpretation", "Community Voting", "Tägliche Challenge", "Spielmechanik", "Themenwahl"],
     "interaction": {
-      "input": "Taeglicher Foto-Upload zu einem vorgegebenen Themenbegriff",
-      "output": "Community-Voting, Gewinnerstatus und Auswahl des naechsten Themas",
+      "input": "Täglicher Foto-Upload zu einem vorgegebenen Themenbegriff",
+      "output": "Community-Voting, Gewinnerstatus und Auswahl des nächsten Themas",
       "phases": ["Einsendungsphase", "Bewertungsphase", "Siegerphase"]
     },
     "collaboration": {
-      "with": ["Bastian Roegele", "Elias Ginter"],
+      "with": ["Bastian Rögele", "Elias Ginter"],
       "context": "Agile Webanwendung mit Python"
     },
     "media": {
@@ -191,16 +291,16 @@
     "type": "physical-interface",
     "year": "2022",
     "status": "Prototype",
-    "description": "Ein physisches Interface, das Gesichtsausdruecke erkennt und emotionale Zustaende in abstrakte Lichtsignale uebersetzt.",
-    "summary": "Ein Experiment ueber die Detektion, Abstraktion und externe Darstellung von Emotion durch ein nicht-menschliches Gegenueber.",
-    "abstract": "MoodTranslator untersucht, wie Emotionen technisch gelesen, abstrahiert und als sichtbares Signal nach aussen getragen werden koennen. Eine Webcam erfasst den Gesichtsausdruck der tragenden Person; die erkannte Stimmung wird anschliessend in Licht, Farbe und Bewegung uebersetzt.\n\nDas Projekt bewegt sich zwischen interaktiver Installation, Physical Interface und spekulativem Kommunikationsobjekt. Im Zentrum steht nicht die perfekte Erkennung von Emotion, sondern die Frage, was passiert, wenn ein nicht-menschliches System versucht, innere Zustaende sichtbar zu machen. Der Gegenueber begegnet keiner direkten menschlichen Mimik, sondern einer maschinell uebersetzten Facette: Farbe, Rhythmus und mechanische Bewegung ersetzen den Ausdruck des Gesichts.\n\nRealisiert wurde der Prototyp mit Gesichtsausdruckserkennung in p5.js, zwei Hochleistungs-LEDs, Farbfolien und Servomotoren. Der Arduino uebernimmt dabei nur die Ausfuehrung der Zustands-IDs; die Interpretation und Logik liegen weitgehend in p5.js.",
+    "description": "Ein physisches Interface, das Gesichtsausdrücke erkennt und emotionale Zustände in abstrakte Lichtsignale übersetzt.",
+    "summary": "Ein Experiment über die Detektion, Abstraktion und externe Darstellung von Emotion durch ein nicht-menschliches Gegenüber.",
+    "abstract": "MoodTranslator untersucht, wie Emotionen technisch gelesen, abstrahiert und als sichtbares Signal nach außen getragen werden können. Eine Webcam erfasst den Gesichtsausdruck der tragenden Person; die erkannte Stimmung wird anschließend in Licht, Farbe und Bewegung übersetzt.\n\nDas Projekt bewegt sich zwischen interaktiver Installation, Physical Interface und spekulativem Kommunikationsobjekt. Im Zentrum steht nicht die perfekte Erkennung von Emotion, sondern die Frage, was passiert, wenn ein nicht-menschliches System versucht, innere Zustände sichtbar zu machen. Der Gegenüber begegnet keiner direkten menschlichen Mimik, sondern einer maschinell übersetzten Facette: Farbe, Rhythmus und mechanische Bewegung ersetzen den Ausdruck des Gesichts.\n\nRealisiert wurde der Prototyp mit Gesichtsausdruckserkennung in p5.js, zwei Hochleistungs-LEDs, Farbfolien und Servomotoren. Der Arduino übernimmt dabei nur die Ausführung der Zustands-IDs; die Interpretation und Logik liegen weitgehend in p5.js.",
     "role": ["Concept", "Interaction Design", "Physical Prototyping", "Creative Coding"],
     "tools": ["p5.js", "Face Detection", "Arduino", "Servo Motors", "High Power LEDs"],
     "tags": ["Abstract Concept", "Interactive Experience", "Physical Interface", "Emotion", "Machine Perception"],
-    "themes": ["Emotionserkennung", "Abstraktion", "Nicht-menschliche Kommunikation", "Koerper", "Signal"],
+    "themes": ["Emotionserkennung", "Abstraktion", "Nicht-menschliche Kommunikation", "Körper", "Signal"],
     "interaction": {
-      "input": "Gesichtsausdruckserkennung ueber Webcam",
-      "output": "Farbsignale, Blinkrhythmen und mechanisch gefuehrte Farbfolien",
+      "input": "Gesichtsausdruckserkennung über Webcam",
+      "output": "Farbsignale, Blinkrhythmen und mechanisch geführte Farbfolien",
       "states": [
         {
           "mood": "Neutral",
@@ -212,7 +312,7 @@
         },
         {
           "mood": "Happy",
-          "signal": "Gruenes flackerndes Licht als positives Signal"
+          "signal": "Grünes flackerndes Licht als positives Signal"
         }
       ]
     },
@@ -224,7 +324,7 @@
       "kind": "video",
       "src": null,
       "poster": "/media/video-poster.svg",
-      "alt": "MoodTranslator als physisches Interface zur Uebersetzung von Emotion in Lichtsignale"
+      "alt": "MoodTranslator als physisches Interface zur Übersetzung von Emotion in Lichtsignale"
     },
     "videoEmbed": {
       "provider": "youtube",
@@ -247,18 +347,18 @@
     "type": "video",
     "year": "2022",
     "status": "Completed",
-    "description": "Ein Stop-Motion-Film ueber eine unsichtbare Kraft, die als lebendige Hand in den Alltag einer gewoehnlichen Person eingreift.",
-    "summary": "Ein Madmotion-Film, in dem der schlechte Einfluss die Kontrolle ueber ein ordentliches, angepasstes Leben gewinnt.",
-    "abstract": "BadInfluence zeigt den schlechten Einfluss als koerperhafte, fast eigenstaendige Figur: eine Hand, die in das Leben einer scheinbar normalen Person eingreift und nach und nach die Kontrolle uebernimmt.\n\nDurch Stop Motion werden Handlungen sichtbar, die in der Realitaet so nicht moeglich waeren. Der Film nutzt die kuenstliche Bewegung nicht nur als Technik, sondern als konzeptuelles Mittel: Das Unsichtbare bekommt eine Form, der innere Impuls wird zu einer physischen Kraft. So entsteht ein surrealer Konflikt zwischen Routine, Selbstkontrolle und der Verlockung, ihr zu entkommen.",
+    "description": "Ein Stop-Motion-Film über eine unsichtbare Kraft, die als lebendige Hand in den Alltag einer gewöhnlichen Person eingreift.",
+    "summary": "Ein Madmotion-Film, in dem der schlechte Einfluss die Kontrolle über ein ordentliches, angepasstes Leben gewinnt.",
+    "abstract": "BadInfluence zeigt den schlechten Einfluss als körperhafte, fast eigenständige Figur: eine Hand, die in das Leben einer scheinbar normalen Person eingreift und nach und nach die Kontrolle übernimmt.\n\nDurch Stop Motion werden Handlungen sichtbar, die in der Realität so nicht möglich wären. Der Film nutzt die künstliche Bewegung nicht nur als Technik, sondern als konzeptuelles Mittel: Das Unsichtbare bekommt eine Form, der innere Impuls wird zu einer physischen Kraft. So entsteht ein surrealer Konflikt zwischen Routine, Selbstkontrolle und der Verlockung, ihr zu entkommen.",
     "role": ["Concept", "Stop Motion", "Film", "Editing"],
     "tools": ["Stop Motion", "Camera", "Video Editing"],
     "tags": ["Abstract Concept", "Film", "Stop Motion", "Surreal", "Influence"],
-    "themes": ["Einfluss", "Kontrolle", "Alltag", "Versuchung", "Surrealitaet"],
+    "themes": ["Einfluss", "Kontrolle", "Alltag", "Versuchung", "Surrealität"],
     "media": {
       "kind": "video",
       "src": null,
       "poster": "/media/bad-influence-thumbnail.png",
-      "alt": "BadInfluence als Stop-Motion-Film ueber eine lebendige Hand als schlechten Einfluss"
+      "alt": "BadInfluence als Stop-Motion-Film über eine lebendige Hand als schlechten Einfluss"
     },
     "videoEmbed": {
       "provider": "youtube",
@@ -283,7 +383,7 @@
     "status": "Completed",
     "description": "Ein audiovisuelles Experiment, in dem selbst aufgenommene Alltagssounds und Handlungen zu einer rhythmischen Sequencer-Komposition werden.",
     "summary": "Sound und Bild folgen demselben Prinzip: Aufgenommene Aktionen werden geschnitten, wiederholt und wie in einem Step-Sequencer zu einer dynamischen Komposition angeordnet.",
-    "abstract": "Cut N Copy basiert auf Sounds, die im direkten Umfeld erzeugt und aufgenommen wurden. Zu jedem Klang gehoert auch das Bild der Handlung, die ihn hervorbringt. Aus diesen fragmentierten Aufnahmen entsteht eine Komposition, die wie ein Step-Sequencer funktioniert: kurze Samples werden gesetzt, wiederholt und rhythmisch miteinander kombiniert.\n\nDas Video uebertraegt dasselbe Prinzip auf die Bildebene. Es zeigt nicht nur das Ergebnis der Klaenge, sondern die Handlungen selbst als visuelle Samples. So entsteht ein dynamisches System, in dem Alltag, Klangproduktion und Schnitt zu einer gemeinsamen audiovisuellen Struktur werden.",
+    "abstract": "Cut N Copy basiert auf Sounds, die im direkten Umfeld erzeugt und aufgenommen wurden. Zu jedem Klang gehört auch das Bild der Handlung, die ihn hervorbringt. Aus diesen fragmentierten Aufnahmen entsteht eine Komposition, die wie ein Step-Sequencer funktioniert: kurze Samples werden gesetzt, wiederholt und rhythmisch miteinander kombiniert.\n\nDas Video überträgt dasselbe Prinzip auf die Bildebene. Es zeigt nicht nur das Ergebnis der Klänge, sondern die Handlungen selbst als visuelle Samples. So entsteht ein dynamisches System, in dem Alltag, Klangproduktion und Schnitt zu einer gemeinsamen audiovisuellen Struktur werden.",
     "role": ["Concept", "Sound Recording", "Editing", "Motion"],
     "tools": ["Field Recording", "Video Editing", "Rhythmic Composition"],
     "tags": ["Abstract Concept", "Sound", "Video", "Sequencer", "Composition"],
@@ -315,13 +415,13 @@
     "type": "video",
     "year": "2024",
     "status": "Completed",
-    "description": "Sounddesign fuer das Filmprojekt von Tom Henkel in Zusammenarbeit mit Studierenden der Elisava.",
-    "summary": "Sounddesign fuer ein Filmprojekt ueber Spannung, Kontrolle und Unordnung.",
-    "abstract": "Amor Fati // Bureaucracy & Chaos ist ein Filmprojekt von Tom Henkel in Zusammenarbeit mit Studierenden der Elisava. Der Beitrag zu diesem Projekt lag im Sounddesign: Klang, Atmosphaere und akustische Struktur begleiten die visuelle Erzaehlung zwischen Ordnung, Buerokratie und Chaos.",
+    "description": "Sounddesign für das Filmprojekt von Tom Henkel in Zusammenarbeit mit Studierenden der Elisava.",
+    "summary": "Sounddesign für ein Filmprojekt über Spannung, Kontrolle und Unordnung.",
+    "abstract": "Amor Fati // Bureaucracy & Chaos ist ein Filmprojekt von Tom Henkel in Zusammenarbeit mit Studierenden der Elisava. Der Beitrag zu diesem Projekt lag im Sounddesign: Klang, Atmosphäre und akustische Struktur begleiten die visuelle Erzählung zwischen Ordnung, Bürokratie und Chaos.",
     "role": ["Sound Design"],
     "tools": ["Sound Design", "Audio Editing", "Mixing"],
     "tags": ["Sounddesign", "Audio", "Bureaucracy", "Chaos"],
-    "themes": ["Ordnung", "Chaos", "Kontrolle", "Atmosphaere", "Klang"],
+    "themes": ["Ordnung", "Chaos", "Kontrolle", "Atmosphäre", "Klang"],
     "collaboration": {
       "with": ["Tom Henkel", "Studierende der Elisava"],
       "context": "Filmprojekt"

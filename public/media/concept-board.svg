@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200" role="img" aria-labelledby="title desc">
   <title id="title">Abstraktes Konzeptboard</title>
-  <desc id="desc">Grosse abstrakte Flaeche als Platzhalter fuer Portfolio-Bilder.</desc>
+  <desc id="desc">Große abstrakte Fläche als Platzhalter für Portfolio-Bilder.</desc>
   <rect width="1800" height="1200" fill="#111315"/>
   <rect x="90" y="120" width="540" height="740" fill="#e9dfc8"/>
   <rect x="690" y="190" width="930" height="460" fill="#6fcabd"/>
