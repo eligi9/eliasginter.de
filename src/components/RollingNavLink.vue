@@ -1,7 +1,7 @@
 <script setup>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 
-defineProps({
+const props = defineProps({
   href: {
     type: String,
     required: true,
@@ -10,12 +10,17 @@ defineProps({
     type: String,
     required: true,
   },
+  active: {
+    type: Boolean,
+    default: false,
+  },
 })
 
-const isActive = ref(false)
+const isHoverActive = ref(false)
+const isActive = computed(() => props.active || isHoverActive.value)
 
 const rollLetter = (event) => {
-  isActive.value = true
+  isHoverActive.value = true
   event.currentTarget.classList.add('is-rolling')
 }
 
@@ -24,12 +29,12 @@ const resetLetter = (event) => {
 }
 
 const deactivateWord = () => {
-  isActive.value = false
+  isHoverActive.value = false
 }
 </script>
 
 <template>
-  <a :href="href" :aria-label="label">
+  <a :href="href" :aria-label="label" :aria-current="active ? 'page' : null">
     <span
       class="nav-label"
       :class="{ 'is-active': isActive }"

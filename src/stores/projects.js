@@ -39,7 +39,6 @@ const getProjectSearchText = (project) => {
 
 export const useProjectsStore = defineStore('projects', () => {
   const activeCategory = ref('Alle')
-  const activeGalleryIndex = ref(0)
   const projects = ref(projectItems)
 
   const sortedProjects = computed(() =>
@@ -96,35 +95,15 @@ export const useProjectsStore = defineStore('projects', () => {
       : []
   }
 
-  const resetGallery = () => {
-    activeGalleryIndex.value = 0
-  }
-
-  const showPreviousImage = (galleryLength) => {
-    if (galleryLength <= 1) return
-
-    activeGalleryIndex.value = (activeGalleryIndex.value - 1 + galleryLength) % galleryLength
-  }
-
-  const showNextImage = (galleryLength) => {
-    if (galleryLength <= 1) return
-
-    activeGalleryIndex.value = (activeGalleryIndex.value + 1) % galleryLength
-  }
-
   return {
     activeCategory,
-    activeGalleryIndex,
     categoryFilters,
     filteredProjects,
     flatCategoryFilters,
     getProjectById,
     getProjectGallery,
     projects,
-    resetGallery,
     setCategory,
-    showNextImage,
-    showPreviousImage,
     sortedProjects,
   }
 })
