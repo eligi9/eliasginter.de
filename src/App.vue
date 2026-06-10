@@ -3,6 +3,7 @@ import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import ProjectModule from './components/ProjectModule.vue'
 import P5Canvas from './components/P5Canvas.vue'
 import ProjectCarousel from './components/ProjectCarousel.vue'
+import ProjectGridView from './components/ProjectGridView.vue'
 import RollingNavLink from './components/RollingNavLink.vue'
 import ScrollToTopButton from './components/ScrollToTopButton.vue'
 import about from './data/about.json'
@@ -10,7 +11,7 @@ import { useProjectsStore } from './stores/projects'
 
 const navItems = [
   { href: '#/projects', label: 'Work' },
-  { href: '#profil', label: 'About' },
+  { href: '#/about', label: 'About' },
 ]
 
 const projectsStore = useProjectsStore()
@@ -27,6 +28,7 @@ const projectRouteId = computed(() => {
 })
 
 const isProjectIndex = computed(() => routeHash.value === '#/projects')
+const isAboutPage = computed(() => routeHash.value === '#/about')
 const selectedProject = computed(() => projectsStore.getProjectById(projectRouteId.value))
 const selectedGallery = computed(() => projectsStore.getProjectGallery(selectedProject.value))
 const formatList = (items = []) => items.join(', ')
@@ -34,6 +36,10 @@ const abstractParagraphs = computed(() => selectedProject.value?.abstract?.split
 const isNavItemActive = (item) => {
   if (item.href === '#/projects') {
     return routeHash.value.startsWith('#/projects')
+  }
+
+  if (item.href === '#/about') {
+    return isAboutPage.value
   }
 
   return routeHash.value === item.href
@@ -64,23 +70,22 @@ onBeforeUnmount(() => {
 
   <main v-if="selectedProject" id="top" class="project-detail-page">
     <article class="project-detail" aria-labelledby="project-detail-title">
-      <a class="project-detail-back-link" href="#/projects" aria-label="Zurück zur Projektübersicht">
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2.4"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          aria-hidden="true"
-          focusable="false"
-        >
-          <path d="M19 12H5" />
-          <path d="M12 5l-7 7l7 7" />
-        </svg>
-      </a>
-
       <header class="project-detail-hero">
+        <a class="project-detail-back-link" href="#/projects" aria-label="Zurück zur Projektübersicht">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M19 12H5" />
+            <path d="M12 5l-7 7l7 7" />
+          </svg>
+        </a>
         <div>
           <p class="section-kicker">{{ selectedProject.kicker }}</p>
           <h1 id="project-detail-title">{{ selectedProject.title }}</h1>
@@ -142,8 +147,17 @@ onBeforeUnmount(() => {
   </main>
 
   <main v-else-if="isProjectIndex" id="top" class="projects-page">
-    <section class="projects-overview" aria-labelledby="projects-title">
-      <div class="projects-heading">
+    <ProjectGridView
+      :projects="projectsStore.filteredProjects"
+      :category-groups="projectsStore.categoryFilters"
+      :active-category="projectsStore.activeCategory"
+      @select-category="projectsStore.setCategory"
+    />
+  </main>
+
+  <main v-else-if="isAboutPage" id="top" class="about-page">
+    <section class="about-single" aria-labelledby="about-title">
+      <header class="about-heading">
         <a class="projects-back-link" href="#top" aria-label="Zurück zur Startseite">
           <svg
             viewBox="0 0 24 24"
@@ -160,36 +174,20 @@ onBeforeUnmount(() => {
           </svg>
         </a>
         <div>
-          <p class="section-kicker">Work</p>
-          <h1 id="projects-title">Ausgewählte Projekte</h1>
+          <p class="section-kicker">About</p>
+          <h1 id="about-title">{{ about.title }}</h1>
+        </div>
+      </header>
+
+      <figure class="about-portrait">
+        <img src="/media/elias-ginter-cutout.png" alt="Portrait von Elias Ginter" />
+      </figure>
+
+      <div class="about-content">
+        <div class="project-copy about-copy">
+          <p v-for="paragraph in about.paragraphs" :key="paragraph">{{ paragraph }}</p>
         </div>
       </div>
-
-      <div class="project-filters" aria-label="Projekte filtern">
-        <div
-          v-for="group in projectsStore.categoryFilters"
-          :key="group.id"
-          class="project-filter-group"
-        >
-          <button
-            v-for="category in group.items"
-            :key="category.label"
-            type="button"
-            :class="{ 'is-active': projectsStore.activeCategory === category.label }"
-            @click="projectsStore.setCategory(category.label)"
-          >
-            {{ category.label }}
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <section class="project-stack project-stack-filtered" aria-label="Gefilterte Arbeiten">
-      <ProjectModule
-        v-for="project in projectsStore.filteredProjects"
-        :key="project.title"
-        :project="project"
-      />
     </section>
   </main>
 
@@ -213,19 +211,6 @@ onBeforeUnmount(() => {
         :key="project.title"
         :project="project"
       />
-    </section>
-
-    <section id="profil" class="profile-section" aria-labelledby="profile-title">
-      <div>
-        <p class="section-kicker">{{ about.kicker }}</p>
-        <h2 id="profile-title">{{ about.title }}</h2>
-      </div>
-      <figure class="profile-portrait">
-        <img src="/media/elias-ginter-cutout.png" alt="Portrait von Elias Ginter" />
-      </figure>
-      <div class="profile-copy">
-        <p v-for="paragraph in about.paragraphs" :key="paragraph">{{ paragraph }}</p>
-      </div>
     </section>
   </main>
 
