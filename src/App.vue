@@ -96,10 +96,6 @@ onBeforeUnmount(() => {
             <dt>Jahr</dt>
             <dd>{{ selectedProject.year }}</dd>
           </div>
-          <div v-if="selectedProject.status">
-            <dt>Status</dt>
-            <dd>{{ selectedProject.status }}</dd>
-          </div>
           <div v-if="selectedProject.role?.length">
             <dt>Rolle</dt>
             <dd>{{ formatList(selectedProject.role) }}</dd>
