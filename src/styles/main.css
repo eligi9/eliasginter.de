@@ -20,12 +20,25 @@
 
 html {
   scroll-behavior: smooth;
+  background: #0d0f11;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  background: #0d0f11;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  z-index: 9;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: env(safe-area-inset-bottom);
+  pointer-events: none;
   background: #0d0f11;
 }
 
@@ -453,6 +466,31 @@ a {
 .project-live-link:hover,
 .project-live-link:focus-visible {
   color: #f06d4f;
+}
+
+.project-live-link {
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0;
+  padding: 16px 18px;
+  border: 1px solid #f4f1e8;
+  background: #f4f1e8;
+  color: #0d0f11;
+  font-size: 0.95rem;
+  text-transform: none;
+}
+
+.project-live-link::after {
+  content: "->";
+  margin-left: 18px;
+}
+
+.project-live-link:hover,
+.project-live-link:focus-visible {
+  border-color: #6fcabd;
+  background: #6fcabd;
+  color: #0d0f11;
 }
 
 .projects-page,
@@ -1117,12 +1155,20 @@ a {
 
   .project-filters {
     justify-items: start;
+    gap: 6px;
     max-height: 32vh;
     overflow: auto;
   }
 
   .project-filter-group {
     justify-content: flex-start;
+    gap: 5px;
+  }
+
+  .project-filters button {
+    min-height: 26px;
+    padding: 4px 7px;
+    font-size: 0.58rem;
   }
 
   .project-module {
