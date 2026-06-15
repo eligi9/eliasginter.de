@@ -110,6 +110,15 @@ onBeforeUnmount(() => {
           <p v-for="paragraph in abstractParagraphs" :key="paragraph">{{ paragraph }}</p>
         </div>
         <aside class="project-detail-meta" aria-label="Projektinformationen">
+          <a
+            v-if="selectedProject.links?.live"
+            class="project-live-link"
+            :href="selectedProject.links.live"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Projekt ansehen
+          </a>
           <div v-if="selectedProject.tools?.length">
             <h2>Tools</h2>
             <ul>
@@ -128,15 +137,6 @@ onBeforeUnmount(() => {
               <li v-for="tag in selectedProject.tags" :key="tag">{{ tag }}</li>
             </ul>
           </div>
-          <a
-            v-if="selectedProject.links?.live"
-            class="project-live-link"
-            :href="selectedProject.links.live"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Projekt öffnen
-          </a>
         </aside>
       </section>
     </article>
@@ -259,7 +259,7 @@ onBeforeUnmount(() => {
       </a>
       <a
         class="social-link linkedin-link"
-        href="https://www.linkedin.com/in/elias-ginter-9a55671a0"
+        href="https://www.linkedin.com/in/eliasginter983/"
         target="_blank"
         rel="noreferrer"
         aria-label="Elias Ginter auf LinkedIn"

@@ -23,7 +23,7 @@ const categoryFilters = [
   },
 ]
 
-const getProjectSearchText = (project) => {
+const getProjectSearchValues = (project) => {
   const values = [
     project.title,
     project.kicker,
@@ -34,7 +34,7 @@ const getProjectSearchText = (project) => {
     ...(project.themes || []),
   ]
 
-  return values.join(' ').toLowerCase()
+  return values.filter(Boolean).map((value) => value.toLowerCase())
 }
 
 export const useProjectsStore = defineStore('projects', () => {
@@ -66,9 +66,9 @@ export const useProjectsStore = defineStore('projects', () => {
     }
 
     return sortedProjects.value.filter((project) => {
-      const searchText = getProjectSearchText(project)
+      const searchValues = getProjectSearchValues(project)
 
-      return activeFilter.matches.some((match) => searchText.includes(match.toLowerCase()))
+      return activeFilter.matches.some((match) => searchValues.includes(match.toLowerCase()))
     })
   })
 

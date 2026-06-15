@@ -11,7 +11,7 @@
     "abstract": "Der Riss markiert die Grenze zwischen zwei Realit\u00e4ten: einer d\u00fcsteren, kalten Welt, geerdet in Fakten und einer farbenfrohen, leichtf\u00fc\u00dfigen Welt. Das Filmprojekt \"Riss\" erkundet die Kraft der Emotionen und die Bewegung zwischen diesen unterschiedlichen Sph\u00e4ren. Es beleuchtet den inneren Kampf um Autonomie - die Selbstbestimmung der eigenen Realit\u00e4t.\n\n\"Riss\" ist ein Filmprojekt in Kooperation mit der T\u00e4nzerin Christine Kuckuck, das im Rahmen von \"Dance, Draw & Dance\", eines fach\u00fcbergreifenden Semesterkonzepts, entstanden ist.\n\nDas Ergebnis war ein Videoprojekt, bei dem wir eine Verbindung zwischen der reinen Tanzkunst, der filmischen Aufzeichnung und der Erweiterung und Verst\u00e4rkung der vom T\u00e4nzer ausgedr\u00fcckten Emotionen suchten.",
     "role": ["Concept", "Film", "Editing", "Visual Direction"],
     "tools": ["Camera", "Video Editing", "Concept Development"],
-    "tags": ["Abstract Concept", "Film", "Dance", "Emotion", "Contrast"],
+    "tags": ["Abstract Concept", "Film", "Dance", "Motion", "Gefühl", "Contrast"],
     "themes": ["Zerrissenheit", "Autonomie", "Realität", "Innenwelt", "Körper"],
     "collaboration": {
       "with": ["Christine Kuckuck"],
@@ -20,9 +20,31 @@
     "media": {
       "kind": "video",
       "src": null,
-      "poster": "/media/riss-thumbnail-color.jpg",
+      "poster": "/media/riss/thumbnail-color.jpg",
       "alt": "Filmprojekt Riss über eine Tänzerin zwischen farbenfroher Innenwelt und kalter Realität"
     },
+    "gallery": [
+      {
+        "src": "/media/riss/thumbnail-color.jpg",
+        "alt": "Riss Filmstill mit Tänzerin vor farbiger abstrakter Innenwelt"
+      },
+      {
+        "src": "/media/riss/riss-01.jpg",
+        "alt": "Tänzerin vor pink-gelber abstrakter Bildwelt im Filmprojekt Riss"
+      },
+      {
+        "src": "/media/riss/riss-02.jpg",
+        "alt": "Dreh von Riss in einer Betonumgebung mit Kamera und Tänzerin"
+      },
+      {
+        "src": "/media/riss/riss-03.jpg",
+        "alt": "Setaufnahme von Riss mit grün markierter Tänzerin in einer Tiefgarage"
+      },
+      {
+        "src": "/media/riss/riss-04.jpg",
+        "alt": "Tänzerin im Greenscreen-Studio für das Filmprojekt Riss"
+      }
+    ],
     "videoEmbed": {
       "provider": "youtube",
       "url": "https://youtu.be/9D5fCz_LJe4",
@@ -30,6 +52,60 @@
       "background": true,
       "controls": false
     },
+    "links": {
+      "live": null,
+      "repository": null,
+      "caseStudy": null
+    },
+    "featured": true
+  },
+  {
+    "id": "kassensystem-teestube-dinkelsbuehl",
+    "title": "Kassensystem Teestube Dinkelsbühl",
+    "kicker": "Digital Design / Fullstack Webapp",
+    "type": "webapp",
+    "year": "2024",
+    "status": "Completed",
+    "description": "Eine digitale Kassenanwendung für die Teestube Dinkelsbühl, die Bestellungen schneller berechenbar macht und den Service im laufenden Cafébetrieb entlastet.",
+    "summary": "Eine Webapp für Bestellaufnahme, Preisberechnung und Tischtracking in einem kleinen Teefachgeschäft und Café.",
+    "abstract": "Für die Teestube Dinkelsbühl, ein kleines Teefachgeschäft und Café im Herzen der mittelfränkischen Kleinstadt, entstand eine digitale Anwendung zur Unterstützung des täglichen Servicebetriebs.\n\nIm Mittelpunkt steht ein Interface, das Bestellungen schnell erfassbar, nachvollziehbar und berechenbar macht. Artikel können direkt über klar gegliederte Kategorien ausgewählt werden, während Tischbestellungen und Zwischensummen sichtbar bleiben. Dadurch wird der Ablauf an der Kasse ruhiger, Fehlerquellen werden reduziert und Mitarbeitende behalten auch in dicht getakteten Situationen den Überblick.\n\nGestalterisch verbindet das System eine funktionale Kassensprache mit einer warmen, zum Ort passenden visuellen Ebene. Die Anwendung ist auf wiederholte Nutzung im Caféalltag ausgelegt: große Touchflächen, eindeutige Produktgruppen und ein klarer Fokus auf Geschwindigkeit, Lesbarkeit und Bestellkontrolle.",
+    "role": ["Digital Design", "Interaction Design", "Fullstack Development"],
+    "tools": ["Web App", "Modular Web Components", "REST API", "PostgreSQL", "Touch Interface", "Order Tracking", "Point of Sale"],
+    "tags": ["Digital Design", "Webapp", "Fullstack", "Code", "Point of Sale", "Café"],
+    "themes": ["Modulare Webkomponenten", "REST API", "PostgreSQL", "Bestelltracking", "Service Workflow", "Touch Interface"],
+    "interaction": {
+      "input": "Bestellungen werden über große Touchflächen und Produktkategorien direkt am Gerät erfasst.",
+      "output": "Das System berechnet Summen, strukturiert Tischbestellungen und macht den aktuellen Bestellstand sichtbar."
+    },
+    "media": {
+      "kind": "image",
+      "src": "/media/teestube-dinkelsbuehl/teestube-thumbnail.jpg",
+      "poster": null,
+      "alt": "Außenansicht der Teestube Dinkelsbühl mit Teefachgeschäft und Café"
+    },
+    "gallery": [
+      {
+        "src": "/media/teestube-dinkelsbuehl/teestube-thumbnail.jpg",
+        "alt": "Außenansicht der Teestube Dinkelsbühl mit Teefachgeschäft und Café"
+      },
+      {
+        "src": "/media/teestube-dinkelsbuehl/thumbnail.jpg",
+        "alt": "Kassensystem Teestube Dinkelsbühl auf einem Tablet im Cafébetrieb"
+      },
+      {
+        "src": "/media/teestube-dinkelsbuehl/table-overview.jpg",
+        "alt": "Tabletansicht des Kassensystems mit Tischübersicht und aktiven Bestellungen"
+      },
+      {
+        "src": "/media/teestube-dinkelsbuehl/order-service.jpg",
+        "alt": "Service-Situation mit Bestellübersicht des Kassensystems am Tisch"
+      },
+      {
+        "src": "/media/teestube-dinkelsbuehl/table-selection.jpg",
+        "alt": "Tabletansicht zur Auswahl von Innen- und Außentischen im Kassensystem"
+      }
+    ],
+    "videoEmbed": null,
     "links": {
       "live": null,
       "repository": null,
@@ -54,7 +130,7 @@
     "media": {
       "kind": "video",
       "src": null,
-      "poster": "/media/lifecyrcle-thumbnail.jpg",
+      "poster": "/media/lifecyrcle/thumbnail.jpg",
       "alt": "LifeCyrcle als abstrakte Animation über das Leben eines Kreises"
     },
     "videoEmbed": {
@@ -92,7 +168,7 @@
     "media": {
       "kind": "video",
       "src": null,
-      "poster": "/media/easyjam-thumbnail.png",
+      "poster": "/media/easyjam/thumbnail.png",
       "alt": "EasyJam als mobile Webapplikation zum Erstellen eigener Backing Tracks"
     },
     "videoEmbed": {
@@ -129,13 +205,13 @@
     },
     "media": {
       "kind": "image",
-      "src": "/media/lonis-weltraumreise-landingpage.png",
+      "src": "/media/lonis-weltraumreise-landingpage/thumbnail.png",
       "poster": null,
       "alt": "Landingpage Lonis Weltraumreise mit Logo und illustriertem Charakter"
     },
     "gallery": [
       {
-        "src": "/media/lonis-weltraumreise-landingpage.png",
+        "src": "/media/lonis-weltraumreise-landingpage/thumbnail.png",
         "alt": "Landingpage Lonis Weltraumreise mit Logo und illustriertem Charakter"
       }
     ],
@@ -167,13 +243,13 @@
     },
     "media": {
       "kind": "image",
-      "src": "/media/sono-bricolage.jpg",
+      "src": "/media/sono-bricolage/thumbnail.jpg",
       "poster": null,
       "alt": "sono bricolage Installation mit projizierten Wasserresonanzen, analogen Synthesizern, Blechplatten und Blechwannen"
     },
     "gallery": [
       {
-        "src": "/media/sono-bricolage.jpg",
+        "src": "/media/sono-bricolage/thumbnail.jpg",
         "alt": "sono bricolage Installation mit projizierten Wasserresonanzen, analogen Synthesizern, Blechplatten und Blechwannen"
       },
       {
@@ -230,7 +306,7 @@
     "media": {
       "kind": "video",
       "src": null,
-      "poster": "/media/lonis-weltraumreise-thumbnail.jpg",
+      "poster": "/media/lonis-weltraumreise/thumbnail.jpg",
       "alt": "Lonis Weltraumreise als interaktive Webapplikation für Eltern und Kinder"
     },
     "videoEmbed": {
@@ -272,7 +348,7 @@
     },
     "media": {
       "kind": "image",
-      "src": "/media/the-picture-game-thumbnail.png",
+      "src": "/media/the-picture-game/thumbnail.png",
       "poster": null,
       "alt": "The Picture Game als mobile Foto-Game Webanwendung"
     },
@@ -296,8 +372,8 @@
     "abstract": "MoodTranslator untersucht, wie Emotionen technisch gelesen, abstrahiert und als sichtbares Signal nach außen getragen werden können. Eine Webcam erfasst den Gesichtsausdruck der tragenden Person; die erkannte Stimmung wird anschließend in Licht, Farbe und Bewegung übersetzt.\n\nDas Projekt bewegt sich zwischen interaktiver Installation, Physical Interface und spekulativem Kommunikationsobjekt. Im Zentrum steht nicht die perfekte Erkennung von Emotion, sondern die Frage, was passiert, wenn ein nicht-menschliches System versucht, innere Zustände sichtbar zu machen. Der Gegenüber begegnet keiner direkten menschlichen Mimik, sondern einer maschinell übersetzten Facette: Farbe, Rhythmus und mechanische Bewegung ersetzen den Ausdruck des Gesichts.\n\nRealisiert wurde der Prototyp mit Gesichtsausdruckserkennung in p5.js, zwei Hochleistungs-LEDs, Farbfolien und Servomotoren. Der Arduino übernimmt dabei nur die Ausführung der Zustands-IDs; die Interpretation und Logik liegen weitgehend in p5.js.",
     "role": ["Concept", "Interaction Design", "Physical Prototyping", "Creative Coding"],
     "tools": ["p5.js", "Face Detection", "Arduino", "Servo Motors", "High Power LEDs"],
-    "tags": ["Abstract Concept", "Interactive Experience", "Physical Interface", "Emotion", "Machine Perception"],
-    "themes": ["Emotionserkennung", "Abstraktion", "Nicht-menschliche Kommunikation", "Körper", "Signal"],
+    "tags": ["Abstract Concept", "Interactive Experience", "Physical Interface", "Affekt", "Machine Perception"],
+    "themes": ["Affekterkennung", "Abstraktion", "Nicht-menschliche Kommunikation", "Körper", "Signal"],
     "interaction": {
       "input": "Gesichtsausdruckserkennung über Webcam",
       "output": "Farbsignale, Blinkrhythmen und mechanisch geführte Farbfolien",
@@ -368,14 +444,14 @@
     "description": "Ein Stop-Motion-Film über eine unsichtbare Kraft, die als lebendige Hand in den Alltag einer gewöhnlichen Person eingreift.",
     "summary": "Ein Madmotion-Film, in dem der schlechte Einfluss die Kontrolle über ein ordentliches, angepasstes Leben gewinnt.",
     "abstract": "BadInfluence zeigt den schlechten Einfluss als körperhafte, fast eigenständige Figur: eine Hand, die in das Leben einer scheinbar normalen Person eingreift und nach und nach die Kontrolle übernimmt.\n\nDurch Stop Motion werden Handlungen sichtbar, die in der Realität so nicht möglich wären. Der Film nutzt die künstliche Bewegung nicht nur als Technik, sondern als konzeptuelles Mittel: Das Unsichtbare bekommt eine Form, der innere Impuls wird zu einer physischen Kraft. So entsteht ein surrealer Konflikt zwischen Routine, Selbstkontrolle und der Verlockung, ihr zu entkommen.",
-    "role": ["Concept", "Stop Motion", "Film", "Editing"],
-    "tools": ["Stop Motion", "Camera", "Video Editing"],
-    "tags": ["Abstract Concept", "Film", "Stop Motion", "Surreal", "Influence"],
+    "role": ["Concept", "Film", "Editing"],
+    "tools": ["Camera", "Video Editing", "Frame-by-frame Editing"],
+    "tags": ["Abstract Concept", "Film", "Surreal", "Influence"],
     "themes": ["Einfluss", "Kontrolle", "Alltag", "Versuchung", "Surrealität"],
     "media": {
       "kind": "video",
       "src": null,
-      "poster": "/media/bad-influence-thumbnail.png",
+      "poster": "/media/badinfluence/thumbnail.png",
       "alt": "BadInfluence als Stop-Motion-Film über eine lebendige Hand als schlechten Einfluss"
     },
     "videoEmbed": {
@@ -402,14 +478,14 @@
     "description": "Ein audiovisuelles Experiment, in dem selbst aufgenommene Alltagssounds und Handlungen zu einer rhythmischen Sequencer-Komposition werden.",
     "summary": "Sound und Bild folgen demselben Prinzip: Aufgenommene Aktionen werden geschnitten, wiederholt und wie in einem Step-Sequencer zu einer dynamischen Komposition angeordnet.",
     "abstract": "Cut N Copy basiert auf Sounds, die im direkten Umfeld erzeugt und aufgenommen wurden. Zu jedem Klang gehört auch das Bild der Handlung, die ihn hervorbringt. Aus diesen fragmentierten Aufnahmen entsteht eine Komposition, die wie ein Step-Sequencer funktioniert: kurze Samples werden gesetzt, wiederholt und rhythmisch miteinander kombiniert.\n\nDas Video überträgt dasselbe Prinzip auf die Bildebene. Es zeigt nicht nur das Ergebnis der Klänge, sondern die Handlungen selbst als visuelle Samples. So entsteht ein dynamisches System, in dem Alltag, Klangproduktion und Schnitt zu einer gemeinsamen audiovisuellen Struktur werden.",
-    "role": ["Concept", "Sound Recording", "Editing", "Motion"],
+    "role": ["Concept", "Sound Recording", "Editing"],
     "tools": ["Field Recording", "Video Editing", "Rhythmic Composition"],
     "tags": ["Abstract Concept", "Sound", "Video", "Sequencer", "Composition"],
     "themes": ["Alltag", "Sampling", "Rhythmus", "Wiederholung", "Klanghandlung"],
     "media": {
       "kind": "video",
       "src": null,
-      "poster": "/media/cut-n-copy-thumbnail.png",
+      "poster": "/media/cut-n-copy/thumbnail.png",
       "alt": "Cut N Copy als audiovisuelle Komposition aus Alltagssounds und Handlungen"
     },
     "videoEmbed": {
@@ -447,7 +523,7 @@
     "media": {
       "kind": "video",
       "src": null,
-      "poster": "/media/amor-fati-bureaucracy-chaos-thumbnail.jpg",
+      "poster": "/media/amor-fati-bureaucracy-chaos/thumbnail.jpg",
       "alt": "Amor Fati // Bureaucracy & Chaos als audiovisuelles Projekt mit Sounddesign von Elias Ginter"
     },
     "videoEmbed": {
