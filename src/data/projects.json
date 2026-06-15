@@ -323,9 +323,27 @@
     "media": {
       "kind": "video",
       "src": null,
-      "poster": "/media/video-poster.svg",
+      "poster": "/media/moodtranslator/thumbnail.png",
       "alt": "MoodTranslator als physisches Interface zur Übersetzung von Emotion in Lichtsignale"
     },
+    "gallery": [
+      {
+        "src": "/media/moodtranslator/thumbnail.png",
+        "alt": "Rückseite des MoodTranslator-Prototyps mit Kamera, LEDs, Verkabelung und Steuerung"
+      },
+      {
+        "src": "/media/moodtranslator/prototype-in-use.png",
+        "alt": "MoodTranslator-Prototyp im Einsatz auf einem Sofa mit aktivem Lichtsignal"
+      },
+      {
+        "src": "/media/moodtranslator/front-light-state.png",
+        "alt": "MoodTranslator mit leuchtenden LEDs als abstrakte Stimmungsanzeige"
+      },
+      {
+        "src": "/media/moodtranslator/concept-diagram.png",
+        "alt": "Schematische Darstellung des MoodTranslator mit Kamera, LEDs, Displays und Griff"
+      }
+    ],
     "videoEmbed": {
       "provider": "youtube",
       "url": "https://www.youtube.com/watch?v=HLLbuNvaKjo&t=51s",

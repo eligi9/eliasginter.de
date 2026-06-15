@@ -14,9 +14,15 @@ const props = defineProps({
 
 const activeIndex = ref(0)
 
-const galleryItems = computed(() => props.items.filter((item) => item?.src))
+const galleryItems = computed(() => props.items.filter((item) => item?.src || item?.embedUrl))
 const activeItem = computed(() => galleryItems.value[activeIndex.value])
 const galleryLength = computed(() => galleryItems.value.length)
+
+const getPlayableEmbedUrl = (item) => {
+  if (!item?.embedUrl) return null
+
+  return item.embedUrl.replace('controls=0', 'controls=1').replace('disablekb=1', 'disablekb=0')
+}
 
 watch(
   () => props.items,
@@ -41,7 +47,15 @@ const showNextImage = () => {
 <template>
   <section class="project-gallery" aria-label="Projektgalerie">
     <figure v-if="activeItem" class="gallery-frame">
-      <img :src="activeItem.src" :alt="activeItem.alt || title" />
+      <iframe
+        v-if="activeItem.type === 'video'"
+        class="gallery-video"
+        :src="getPlayableEmbedUrl(activeItem)"
+        :title="activeItem.alt || `${title} Video`"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <img v-else :src="activeItem.src" :alt="activeItem.alt || title" />
     </figure>
 
     <div class="gallery-controls">

@@ -84,15 +84,26 @@ export const useProjectsStore = defineStore('projects', () => {
       return []
     }
 
-    if (Array.isArray(project.gallery) && project.gallery.length > 0) {
-      return project.gallery
+    const galleryItems = Array.isArray(project.gallery) ? project.gallery : []
+    const videoItem = project.videoEmbed?.embedUrl
+      ? {
+          type: 'video',
+          provider: project.videoEmbed.provider,
+          embedUrl: project.videoEmbed.embedUrl,
+          alt: project.media?.alt || `${project.title} Video`,
+        }
+      : null
+
+    if (galleryItems.length > 0) {
+      return videoItem ? [videoItem, ...galleryItems] : galleryItems
     }
 
     const fallbackImage = project.media?.src || project.media?.poster
-
-    return fallbackImage
+    const fallbackItems = fallbackImage
       ? [{ src: fallbackImage, alt: project.media?.alt || project.title }]
       : []
+
+    return videoItem ? [videoItem, ...fallbackItems] : fallbackItems
   }
 
   return {
