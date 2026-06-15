@@ -23,7 +23,7 @@ const emit = defineEmits(['select-category'])
   <section class="work-single" aria-labelledby="projects-title">
     <header class="work-header">
       <div class="projects-heading">
-        <a class="projects-back-link" href="#top" aria-label="Zurück zur Startseite">
+        <a class="projects-back-link" href="/" aria-label="Zurück zur Startseite">
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -57,7 +57,13 @@ const emit = defineEmits(['select-category'])
             :class="{ 'is-active': activeCategory === category.label }"
             @click="emit('select-category', category.label)"
           >
-            {{ category.label }}
+            <span
+              v-for="word in category.label.split(' ')"
+              :key="word"
+              class="project-filter-word"
+            >
+              {{ word }}
+            </span>
           </button>
         </div>
       </div>

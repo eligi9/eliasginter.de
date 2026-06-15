@@ -75,10 +75,10 @@ onBeforeUnmount(() => {
   width: 52px;
   height: 52px;
   padding: 0;
-  border: 1px solid rgba(244, 241, 232, 0.24);
+  border: 1px solid rgba(111, 202, 189, 0.42);
   border-radius: 0;
   background: rgba(13, 15, 17, 0.72);
-  color: #ffffff;
+  color: #6fcabd;
   opacity: 0;
   pointer-events: none;
   transform: translateY(14px);
@@ -99,7 +99,7 @@ onBeforeUnmount(() => {
 
 .scroll-top-button:hover,
 .scroll-top-button:focus-visible {
-  border-color: rgba(244, 241, 232, 0.72);
+  border-color: #6fcabd;
   background: rgba(13, 15, 17, 0.92);
 }
 

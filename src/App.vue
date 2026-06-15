@@ -1,5 +1,5 @@
 <script setup>
-import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+import { computed, nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
 import ProjectModule from './components/ProjectModule.vue'
 import P5Canvas from './components/P5Canvas.vue'
 import ProjectCarousel from './components/ProjectCarousel.vue'
@@ -10,53 +10,127 @@ import about from './data/about.json'
 import { useProjectsStore } from './stores/projects'
 
 const navItems = [
-  { href: '#/projects', label: 'Work' },
-  { href: '#/about', label: 'About' },
+  { href: '/projects', label: 'Work' },
+  { href: '/about', label: 'About' },
 ]
 
 const projectsStore = useProjectsStore()
-const routeHash = ref(window.location.hash || '#top')
+const getPendingRedirectPath = () => {
+  const redirectPath = window.sessionStorage.getItem('spa-redirect-path')
+
+  if (!redirectPath) {
+    return null
+  }
+
+  window.sessionStorage.removeItem('spa-redirect-path')
+  window.history.replaceState({}, '', redirectPath)
+
+  return new URL(redirectPath, window.location.origin).pathname.replace(/\/$/, '') || '/'
+}
+
+const getRoutePath = () => {
+  if (window.location.hash.startsWith('#/')) {
+    return window.location.hash.slice(1)
+  }
+
+  if (window.location.hash === '#top') {
+    return '/'
+  }
+
+  const path = window.location.pathname.replace(/\/$/, '')
+
+  return path || '/'
+}
+
+const routePath = ref(getPendingRedirectPath() || getRoutePath())
+
+const scrollToPageTop = () => {
+  requestAnimationFrame(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+  })
+}
 
 const syncRoute = () => {
-  routeHash.value = window.location.hash || '#top'
+  routePath.value = getRoutePath()
+  nextTick(scrollToPageTop)
+}
+
+const navigateTo = (path) => {
+  if (window.location.pathname !== path || window.location.hash) {
+    window.history.pushState({}, '', path)
+  }
+
+  routePath.value = path
+  nextTick(scrollToPageTop)
+}
+
+const handleDocumentClick = (event) => {
+  if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+    return
+  }
+
+  const link = event.target.closest('a')
+
+  if (!link || link.target || link.hasAttribute('download')) {
+    return
+  }
+
+  const url = new URL(link.href)
+  const isAppRoute = url.origin === window.location.origin
+    && ['', '/', '/about', '/projects'].some((path) => url.pathname === path || url.pathname.startsWith('/projects/'))
+
+  if (!isAppRoute) {
+    return
+  }
+
+  event.preventDefault()
+  navigateTo(url.pathname === '' ? '/' : url.pathname)
 }
 
 const projectRouteId = computed(() => {
-  const match = routeHash.value.match(/^#\/projects\/([^/?#]+)/)
+  const match = routePath.value.match(/^\/projects\/([^/?#]+)/)
 
   return match ? decodeURIComponent(match[1]) : null
 })
 
-const isProjectIndex = computed(() => routeHash.value === '#/projects')
-const isAboutPage = computed(() => routeHash.value === '#/about')
+const isProjectIndex = computed(() => routePath.value === '/projects')
+const isAboutPage = computed(() => routePath.value === '/about')
 const selectedProject = computed(() => projectsStore.getProjectById(projectRouteId.value))
 const selectedGallery = computed(() => projectsStore.getProjectGallery(selectedProject.value))
 const formatList = (items = []) => items.join(', ')
 const abstractParagraphs = computed(() => selectedProject.value?.abstract?.split('\n\n') || [])
 const isNavItemActive = (item) => {
-  if (item.href === '#/projects') {
-    return routeHash.value.startsWith('#/projects')
+  if (item.href === '/projects') {
+    return routePath.value.startsWith('/projects')
   }
 
-  if (item.href === '#/about') {
+  if (item.href === '/about') {
     return isAboutPage.value
   }
 
-  return routeHash.value === item.href
+  return routePath.value === item.href
 }
 
 onMounted(() => {
+  if (window.location.hash.startsWith('#/') || window.location.hash === '#top') {
+    window.history.replaceState({}, '', routePath.value)
+  }
+
+  window.addEventListener('popstate', syncRoute)
   window.addEventListener('hashchange', syncRoute)
+  document.addEventListener('click', handleDocumentClick)
 })
 
 onBeforeUnmount(() => {
+  window.removeEventListener('popstate', syncRoute)
   window.removeEventListener('hashchange', syncRoute)
+  document.removeEventListener('click', handleDocumentClick)
 })
 </script>
 
 <template>
   <header class="site-header">
-    <a class="wordmark" href="#top" aria-label="Zum Anfang">Elias Ginter</a>
+    <a class="wordmark" href="/" aria-label="Zur Startseite">Elias Ginter</a>
     <nav class="site-nav" aria-label="Hauptnavigation">
       <RollingNavLink
         v-for="item in navItems"
@@ -71,7 +145,7 @@ onBeforeUnmount(() => {
   <main v-if="selectedProject" id="top" class="project-detail-page">
     <article class="project-detail" aria-labelledby="project-detail-title">
       <header class="project-detail-hero">
-        <a class="project-detail-back-link" href="#/projects" aria-label="Zurück zur Projektübersicht">
+        <a class="project-detail-back-link" href="/projects" aria-label="Zurück zur Projektübersicht">
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -117,7 +191,20 @@ onBeforeUnmount(() => {
             target="_blank"
             rel="noreferrer"
           >
-            Projekt ansehen
+            <span>Projekt ansehen</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M5 12h14" />
+              <path d="M12 5l7 7l-7 7" />
+            </svg>
           </a>
           <div v-if="selectedProject.tools?.length">
             <h2>Tools</h2>
@@ -154,7 +241,7 @@ onBeforeUnmount(() => {
   <main v-else-if="isAboutPage" id="top" class="about-page">
     <section class="about-single" aria-labelledby="about-title">
       <header class="about-heading">
-        <a class="projects-back-link" href="#top" aria-label="Zurück zur Startseite">
+        <a class="projects-back-link" href="/" aria-label="Zurück zur Startseite">
           <svg
             viewBox="0 0 24 24"
             fill="none"

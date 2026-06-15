@@ -14,7 +14,7 @@ const categoryFilters = [
   {
     id: 'secondary',
     items: [
-      { label: 'Sounddesign', matches: ['Sounddesign', 'Sound Design'] },
+      { label: 'Sound Design', matches: ['Sounddesign', 'Sound Design'] },
       { label: 'Code', matches: ['Frontend Development', 'Backend Development', 'Web Development', 'Webapp', 'Web App'] },
       { label: 'Motion', matches: ['Motion', 'Motion Design', 'Animation'] },
       { label: 'Film', matches: ['Film'] },
